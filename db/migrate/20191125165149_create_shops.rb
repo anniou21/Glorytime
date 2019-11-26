@@ -3,7 +3,6 @@ class CreateShops < ActiveRecord::Migration[5.2]
     create_table :shops do |t|
       t.string :name
       t.string :description
-      t.url :avatar
       t.references :user, foreign_key: true
 
       t.timestamps
