@@ -17,5 +17,5 @@ Rails.application.routes.draw do
   get 'watches/delete'
   devise_for :users
   get 'pages/home'
-  root to: 'pages#home'
+  root to: 'watches/index'
 end
