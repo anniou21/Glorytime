@@ -3,9 +3,8 @@ class CreateWatches < ActiveRecord::Migration[5.2]
     create_table :watches do |t|
       t.string :brand
       t.string :model
-      t.float :price
+      t.integer :price
       t.string :description
-      t.string :photo_url
       t.boolean :availability
       t.references :shop, foreign_key: true
 
