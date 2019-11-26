@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root to: 'watches#index'
   get 'shops/index'
   get 'shops/show'
   get 'booking_items/index'
@@ -16,6 +17,4 @@ Rails.application.routes.draw do
   get 'watches/create'
   get 'watches/delete'
   devise_for :users
-  get 'pages/home'
-  root to: 'pages#home'
 end
