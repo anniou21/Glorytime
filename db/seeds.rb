@@ -251,28 +251,28 @@ booking_items_attributes =[
   {
     booking: Booking.find_by(user: User.find_by(name: 'Arafath')),
     watch: watch_1,
-    status: pending,
+    status: 'pending',
     start_date: '23 Decembre 2019',
     end_date: '26 Decembre 2019'
   },
   {
     booking: Booking.find_by(user: User.find_by(name: 'Etienne')),
     watch: watch_2,
-    status: pending,
+    status: 'pending',
     start_date: '13 Decembre 2019',
     end_date: '16 Decembre 2019'
   },
   {
     booking: Booking.find_by(user: User.find_by(name: 'Anniou')),
     watch: watch_3,
-    status: pending,
+    status: 'pending',
     start_date: '30 Decembre 2019',
     end_date: '5 Janvier 2020'
   },
   {
     booking: Booking.find_by(user: User.find_by(name: 'Cedrik')),
     watch: watch_4,
-    status: confirmed,
+    status: 'confirmed',
     start_date: '3 Janvier 2020',
     end_date: '6 Janvier 2020'
   }
