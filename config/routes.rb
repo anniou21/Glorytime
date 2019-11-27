@@ -18,3 +18,6 @@ Rails.application.routes.draw do
   get 'watches/delete'
   devise_for :users
 end
+
+resources booking: do
+end
