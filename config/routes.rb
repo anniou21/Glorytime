@@ -1,23 +1,14 @@
 Rails.application.routes.draw do
-  root to: 'watches#index'
-  get 'shops/index'
-  get 'shops/show'
-  get 'booking_items/index'
-  get 'booking_items/create'
-  get 'booking_items/new'
-  get 'booking_items/delete'
-  get 'booking_items/update'
-  get 'bookings/index'
-  get 'bookings/show'
-  get 'bookings/create'
-  get 'bookings/edit'
-  get 'watches/index'
-  get 'watches/show'
-  get 'watches/new'
-  get 'watches/create'
-  get 'watches/delete'
   devise_for :users
+  root to: 'watches#index'
+  resources :watches
+  resources :shops, only: [:index, :show]
+
+  resources :bookings, only: [ :index, :show, :create, :edit ]  do
+    resources :booking_items, only: [:index, :create, :new, :update, :delete]
+  end
+
+  get '/dashboard', to: 'dashboard#show'
 end
 
-resources booking: do
-end
+
