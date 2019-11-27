@@ -1,6 +1,12 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= image_path "banner-home.jpg", height: 500, width: 1080 %>')">
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= image_path "banner-home.jpg", height: 200, width: 1080 %>')">
   <div class="container">
     <h1>Le Wagon brings <strong>tech skills</strong> to <strong>creative people</strong>!</h1>
+    <div id="container">
+      <div id="searchbar">
+        <input type="text" id="topics" style="float:left"/><input type="hidden" id="topicID" />
+        <div id="btn" onclick="checkWeb()" style="float:left">Get Started</div>
+      </div>
+    </div> <br/>
     <p>Change your life and learn to code at one of our campuses around the world.</p>
   </div>
 </div>
