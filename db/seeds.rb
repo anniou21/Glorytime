@@ -9,11 +9,11 @@
 
 
 puts 'Cleaning database...'
+Review.destroy_all
 BookingItem.destroy_all
 Booking.destroy_all
 Shop.destroy_all
 User.destroy_all
-Review.destroy_all
 Watch.destroy_all
 
 puts 'Creating Users...'
@@ -58,7 +58,7 @@ puts 'Creating Users...'
   name: 'Cedrik',
   description: 'Passioné de montres de luxe'
   )
-user.photo.attach(
+  user.photo.attach(
     io: URI.open('https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/zurqnw71rlncmcpldbyl.jpg'),
     filename: "#{user.name}_avatar",
     content_type: 'image/jpg'
