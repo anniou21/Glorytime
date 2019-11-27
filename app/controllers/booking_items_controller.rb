@@ -1,16 +1,7 @@
 class BookingItemsController < ApplicationController
-  def index
-  end
-
   def create
   end
 
-  def new
-  end
-
-  def delete
-  end
-
-  def update
+  def destroy
   end
 end
