@@ -1,0 +1,183 @@
+*{
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+html{
+  height:100%;
+}
+
+body{
+  background: #e0ddd9;
+}
+
+button:active,
+#favorite-button:active,
+.btn:active{
+  transform: translateY(3px);
+  transition:0.15s;
+}
+
+button,
+input~button,
+input+button,
+select,
+.btn,
+input[type="checkbox"],
+label[for=subscribe-btn]{
+  cursor:pointer;
+}
+
+.card{
+  background:#fff;
+  width: 90%;
+  margin:40px auto
+}
+
+.card > #image-container{
+  position:relative;
+}
+
+.card #image-container #main-img{
+  height:300px;
+}
+
+.card #image-container main.primary{
+  margin:0 auto;
+  display:block;
+  width:47%;
+  height:auto;
+  min-height:300px;
+  background-size:cover;
+}
+
+.card #image-container #thumbnail-container{
+  margin-top:5px;
+  display:flex;
+  justify-content: center;
+}
+
+.card #image-container #thumbnail-container div.thumb{
+  width:35px;
+  height:35px;
+  margin:2px;
+  border:1px solid rgba(0,0,0,0.25);
+  box-sizing:border-box;
+}
+
+.card #image-container #thumbnail-container div.thumb:hover{
+  transform: scale(0.9);
+  transition: 0.3s;
+  transition-timing-function: ease-in;
+}
+
+.card #image-container span#favorite-button{
+  color:rgba(231, 76, 60, 0.5);
+  font-family: "Font Awesome 5 Free";
+  font-size:1.5em;
+  content: "\f004";
+  position:absolute;
+  top:15px;
+  right:4vw;
+  background:#fff;
+  border:1px solid rgba(0, 0, 0, 0.25);
+  border-radius: 50%;
+  padding-top:7px;
+  height:50px;
+  width:50px;
+  text-align:center;
+  box-shadow:0px 1px 40px 0px rgba(0, 0, 0, 0.25);;
+}
+
+.card #image-container span#favorite-button:hover,
+.card #image-container span#favorite-button.active{
+  color:rgba(231, 76, 60, 1);
+  transition-timing-function: ease-in-out;
+  transition:0.3s;
+}
+
+.card #product-information #product-short{
+  text-transform:uppercase;
+  color: #777;
+}
+
+.card #product-information label{
+  font-weight:bold;
+  margin-top:8px;
+  margin-bottom:0;
+}
+
+.card #product-information select{
+  max-width: 18vw;
+}
+
+
+.card .nice-number {
+  display: inline-flex;
+  justify-content: stretch;
+}
+
+.card .nice-number button{
+  background:#27ae60;
+  color:#fff;
+  width:3vw;
+  min-width: 35px;
+  border:0;
+}
+
+.card .nice-number input{
+  width:3.5vw;
+  min-width:50px;
+  height:40px;
+  vertical-align: middle;
+  -moz-appearance: textfield;
+  box-sizing: content-box;
+  margin: 0;
+  text-align: center;
+}
+
+.card .nice-number+button{
+  background:#27ae60;
+  color:#fff;
+  width: 13vw;
+  border:0;
+  margin-left:2px;
+  padding-top:10.5px;
+  padding-bottom:11px;
+  transition: 0.35s;
+}
+
+.card .nice-number button:hover,
+.card .nice-number+button:hover{
+  background:#1e8449;
+  transition: 0.25s;
+}
+
+.disabled,
+.thumbnail.selected,
+.thumbnail.selected:hover{
+  opacity:0.6;
+  cursor: none;
+}
+
+.nice-number input::-webkit-inner-spin-button,
+.nice-number input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.card .nice-number+button.success{
+   border-radius:10px;
+  background-color:orange;
+  transition: 0.2s;
+  float:none;
+}
+
+#product-variables p {
+  padding: 30px 0px;
+}
+
+#product-information {
+  padding: 30px;
+}
