@@ -58,7 +58,7 @@ puts 'Creating Users...'
   name: 'Cedrik',
   description: 'Passioné de montres de luxe'
   )
-user.photo.attach(
+  user.photo.attach(
     io: URI.open('https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/zurqnw71rlncmcpldbyl.jpg'),
     filename: "#{user.name}_avatar",
     content_type: 'image/jpg'
