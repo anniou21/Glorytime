@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
-  root to: 'watches#index'
+  root to: 'pages#home'
   resources :watches
   resources :shops, only: [:index, :show]
 
@@ -10,5 +10,4 @@ Rails.application.routes.draw do
 
   get '/dashboard', to: 'dashboard#show'
 end
-
 
