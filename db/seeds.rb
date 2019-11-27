@@ -223,30 +223,22 @@ Shop.create!(shops_attributes)
 puts 'Creating Bookings...'
 bookings_attributes = [
   {
-    status: 'pending',
-    start_date: '23 Decembre 2019',
-    end_date: '26 Decembre 2019',
+    status: 'confirmed',
     price_total: 500,
     user: User.find_by(name:'Arafath')
   },
   {
-    status: 'confirmed',
-    start_date: '13 Decembre 2019',
-    end_date: '16 Decembre 2019',
+    status: 'paid',
     price_total: 700,
     user: User.find_by(name:'Etienne')
   },
   {
-    status: 'pending',
-    start_date: '30 Decembre 2019',
-    end_date: '5 Janvier 2020',
+    status: 'confirmed',
     price_total: 1300,
     user: User.find_by(name:'Anniou')
   },
   {
-    status: 'confirmed',
-    start_date: '3 Janvier 2020',
-    end_date: '6 Janvier 2020',
+    status: 'paid',
     price_total: 500,
     user: User.find_by(name:'Cedrik')
   }
@@ -258,19 +250,31 @@ puts 'Creating Booking_items...'
 booking_items_attributes =[
   {
     booking: Booking.find_by(user: User.find_by(name: 'Arafath')),
-    watch: watch_1
+    watch: watch_1,
+    status: pending,
+    start_date: '23 Decembre 2019',
+    end_date: '26 Decembre 2019'
   },
   {
     booking: Booking.find_by(user: User.find_by(name: 'Etienne')),
-    watch: watch_2
+    watch: watch_2,
+    status: pending,
+    start_date: '13 Decembre 2019',
+    end_date: '16 Decembre 2019'
   },
   {
     booking: Booking.find_by(user: User.find_by(name: 'Anniou')),
-    watch: watch_3
+    watch: watch_3,
+    status: pending,
+    start_date: '30 Decembre 2019',
+    end_date: '5 Janvier 2020'
   },
   {
     booking: Booking.find_by(user: User.find_by(name: 'Cedrik')),
-    watch: watch_4
+    watch: watch_4,
+    status: confirmed,
+    start_date: '3 Janvier 2020',
+    end_date: '6 Janvier 2020'
   }
 ]
 
