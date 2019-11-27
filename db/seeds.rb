@@ -9,11 +9,11 @@
 
 
 puts 'Cleaning database...'
+Review.destroy_all
 BookingItem.destroy_all
 Booking.destroy_all
 Shop.destroy_all
 User.destroy_all
-Review.destroy_all
 Watch.destroy_all
 
 puts 'Creating Users...'
