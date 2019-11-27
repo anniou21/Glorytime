@@ -1,2 +1,59 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= image_path "banner-home.jpg", height: 200, width: 1080 %>')">
+  <div class="container">
+    <h1>Le Wagon brings <strong>tech skills</strong> to <strong>creative people</strong>!</h1>
+    <div id="container">
+      <div id="searchbar">
+        <input type="text" id="topics" style="float:left"/><input type="hidden" id="topicID" />
+        <div id="btn" onclick="checkWeb()" style="float:left">Get Started</div>
+      </div>
+    </div> <br/>
+    <p>Change your life and learn to code at one of our campuses around the world.</p>
+  </div>
+</div>
+<div class="container mt-5">
+<p>Watches#index</p>
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><%= link_to 'Home', root_path %></li>
+      </ol>
+    </nav>
+      <section class="features-block">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-12 text-left">
+              <h1>Froala Design Blocks</h1>
+              <p class="lead">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+            </div>
+          </div>
+
+          <div class="row text-left mt-5">
+            <div class="col-12 col-sm-8 col-md-4 col-lg-3 m-sm-auto mr-md-auto ml-md-0">
+              <%= image_tag "undraw/undraw_connection_b38q.svg", width: 200 %>
+              <h3><strong>Feature One</strong></h3>
+              <p>Far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+            </div>
+
+            <div class="col-12 col-sm-8 col-md-4 col-lg-3 m-sm-auto pt-5 pt-md-0">
+              <%= image_tag "undraw/undraw_ideas_flow_cy7b.svg", width: 200 %>
+              <h3><strong>Feature Two</strong></h3>
+              <p> It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life.</p>
+            </div>
+
+            <div class="col-12 col-sm-8 col-md-4 col-lg-3 m-sm-auto ml-md-auto mr-md-0 pt-5 pt-md-0">
+              <%= image_tag "undraw/undraw_delivery_address_03n0.svg", width: 200 %>
+              <h3><strong>Feature Three</strong></h3>
+              <p>The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn’t listen.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+</div>
+<div class="banner-features" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= image_path "banner-features.jpg", height: 500, width: 1080 %>')">
+  <div class="container">
+    <h1>Le Wagon brings <strong>tech skills</strong> to <strong>creative people</strong>!</h1>
+    <p>Change your life and learn to code at one of our campuses around the world.</p>
+  </div>
+</div>
+
+
+
