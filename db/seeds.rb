@@ -109,6 +109,39 @@ puts 'Creating Users...'
     content_type: 'image/jpg'
   )
 
+
+
+
+  puts 'Creating Shops...'
+  shops_attributes = [
+    {
+      name: "Champs d'Or",
+      address: "6 Avenue Francklin Delano Roosevelt",
+      description: "Cette bijouterie vend montres, bijoux, maroquinerie et stylos, neufs ou d’occasion, de marques haut de gamme.",
+      user: User.find_by(name:'Bernard')
+    },
+    {
+      name: "Euro Art et Collection",
+      address: "5 Rue de la Grange Batelière",
+      description: "Cette boutique vend montres neufs ou d’occasion, de marques haut de gamme.",
+      user: User.find_by(name:'Paul')
+    },
+    {
+      name: "Charlie Watch - Paris",
+      address: "26 Rue Pastourelle",
+      description: "Cette boutique mets à disposition des montres de marques haut de gamme.",
+      user: User.find_by(name:'Muriel')
+    },
+    {
+      name: "Atelier R.de Fèbres",
+      address: "7 Rue de Rome",
+      description: "Cette boutique mets à disposition des montres de marques haut de gamme.",
+      user: User.find_by(name:'Theodore')
+    }
+  ]
+
+  Shop.create!(shops_attributes)
+
 puts 'Creating Watches...'
 
 
@@ -190,36 +223,6 @@ CHRONOGRAPHE OMEGA CO‑AXIAL 41,5 MM",
 
 
 
-puts 'Creating Shops...'
-shops_attributes = [
-  {
-    name: "Champs d'Or",
-    address: "6 Avenue Francklin Delano Roosevelt",
-    description: "Cette bijouterie vend montres, bijoux, maroquinerie et stylos, neufs ou d’occasion, de marques haut de gamme.",
-    user: User.find_by(name:'Bernard')
-  },
-  {
-    name: "Euro Art et Collection",
-    address: "5 Rue de la Grange Batelière",
-    description: "Cette boutique vend montres neufs ou d’occasion, de marques haut de gamme.",
-    user: User.find_by(name:'Paul')
-  },
-  {
-    name: "Charlie Watch - Paris",
-    address: "26 Rue Pastourelle",
-    description: "Cette boutique mets à disposition des montres de marques haut de gamme.",
-    user: User.find_by(name:'Muriel')
-  },
-  {
-    name: "Atelier R.de Fèbres",
-    address: "7 Rue de Rome",
-    description: "Cette boutique mets à disposition des montres de marques haut de gamme.",
-    user: User.find_by(name:'Theodore')
-  }
-]
-
-Shop.create!(shops_attributes)
-
 puts 'Creating Bookings...'
 bookings_attributes = [
   {
@@ -253,7 +256,7 @@ booking_items_attributes =[
     watch: watch_1,
     status: 'pending',
     start_date: '23 Decembre 2019',
-    end_date: '26 Decembre 2019'
+    end_date: '26 Decembre 2019',
   },
   {
     booking: Booking.find_by(user: User.find_by(name: 'Etienne')),

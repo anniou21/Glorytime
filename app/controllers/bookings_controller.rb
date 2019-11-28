@@ -5,6 +5,7 @@ class BookingsController < ApplicationController
 
   def show
     @booking = Booking.find(params[:id])
-    # @booking_item = BookingItem.new
+    @booking_item = @booking.booking_item_ids # array with all bookings item for current user
+
   end
 end
