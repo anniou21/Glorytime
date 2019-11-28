@@ -1,3 +1,13 @@
-<H1>Liste des locations</H1>
-Utilisateur:
-<%= @booking.start_date %>
+<H1>Détails de la location</H1>
+<br>
+watch : <% @booking_item.each do |id| %>
+<%  if BookingItem.find(id).watch %>
+<%=  BookingItem.find(id).watch.model %>
+<% end %>
+<% end %>
+
+
+Statut: <%= @booking.status %><br>
+Date: <%= @booking.created_at %><br>
+Total: <%= @booking.price_total %><br>
+
