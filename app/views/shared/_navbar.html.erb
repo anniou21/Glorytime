@@ -16,6 +16,9 @@
           <li class="nav-item">
             <%= link_to "Nos montres", watches_path, class: "nav-link" %>
           </li>
+          <li class="nav-item">
+            <%= link_to '| <i class="fas fa-shopping-basket"></i> | '.html_safe,  bookings_path(@booking), class: "nav-link" %>
+          </li>
         </ul>
       </div>
 
