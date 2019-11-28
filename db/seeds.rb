@@ -9,12 +9,7 @@
 
 
 puts 'Cleaning database...'
-Review.destroy_all
-BookingItem.destroy_all
-Booking.destroy_all
-Shop.destroy_all
-User.destroy_all
-Watch.destroy_all
+[Review, BookingItem, Booking, Shop, User, Watch].each(&:destroy_all)
 
 puts 'Creating Users...'
 # users_attributes = [
@@ -109,6 +104,36 @@ puts 'Creating Users...'
     content_type: 'image/jpg'
   )
 
+puts 'Creating Shops...'
+shops_attributes = [
+  {
+    name: "Champs d'Or",
+    address: "6 Avenue Francklin Delano Roosevelt",
+    description: "Cette bijouterie vend montres, bijoux, maroquinerie et stylos, neufs ou d’occasion, de marques haut de gamme.",
+    user: User.find_by(name:'Bernard')
+  },
+  {
+    name: "Euro Art et Collection",
+    address: "5 Rue de la Grange Batelière",
+    description: "Cette boutique vend montres neufs ou d’occasion, de marques haut de gamme.",
+    user: User.find_by(name:'Paul')
+  },
+  {
+    name: "Charlie Watch - Paris",
+    address: "26 Rue Pastourelle",
+    description: "Cette boutique mets à disposition des montres de marques haut de gamme.",
+    user: User.find_by(name:'Muriel')
+  },
+  {
+    name: "Atelier R.de Fèbres",
+    address: "7 Rue de Rome",
+    description: "Cette boutique mets à disposition des montres de marques haut de gamme.",
+    user: User.find_by(name:'Theodore')
+  }
+]
+
+Shop.create!(shops_attributes)
+
 puts 'Creating Watches...'
 
 
@@ -189,37 +214,6 @@ CHRONOGRAPHE OMEGA CO‑AXIAL 41,5 MM",
 # ]
 
 
-
-puts 'Creating Shops...'
-shops_attributes = [
-  {
-    name: "Champs d'Or",
-    address: "6 Avenue Francklin Delano Roosevelt",
-    description: "Cette bijouterie vend montres, bijoux, maroquinerie et stylos, neufs ou d’occasion, de marques haut de gamme.",
-    user: User.find_by(name:'Bernard')
-  },
-  {
-    name: "Euro Art et Collection",
-    address: "5 Rue de la Grange Batelière",
-    description: "Cette boutique vend montres neufs ou d’occasion, de marques haut de gamme.",
-    user: User.find_by(name:'Paul')
-  },
-  {
-    name: "Charlie Watch - Paris",
-    address: "26 Rue Pastourelle",
-    description: "Cette boutique mets à disposition des montres de marques haut de gamme.",
-    user: User.find_by(name:'Muriel')
-  },
-  {
-    name: "Atelier R.de Fèbres",
-    address: "7 Rue de Rome",
-    description: "Cette boutique mets à disposition des montres de marques haut de gamme.",
-    user: User.find_by(name:'Theodore')
-  }
-]
-
-Shop.create!(shops_attributes)
-
 puts 'Creating Bookings...'
 bookings_attributes = [
   {
@@ -250,28 +244,28 @@ puts 'Creating Booking_items...'
 booking_items_attributes =[
   {
     booking: Booking.find_by(user: User.find_by(name: 'Arafath')),
-    watch: watch_1,
+    watch: watch_1.reload,
     status: 'pending',
     start_date: '23 Decembre 2019',
     end_date: '26 Decembre 2019'
   },
   {
     booking: Booking.find_by(user: User.find_by(name: 'Etienne')),
-    watch: watch_2,
+    watch: watch_2.reload,
     status: 'pending',
     start_date: '13 Decembre 2019',
     end_date: '16 Decembre 2019'
   },
   {
     booking: Booking.find_by(user: User.find_by(name: 'Anniou')),
-    watch: watch_3,
+    watch: watch_3.reload,
     status: 'pending',
     start_date: '30 Decembre 2019',
     end_date: '5 Janvier 2020'
   },
   {
     booking: Booking.find_by(user: User.find_by(name: 'Cedrik')),
-    watch: watch_4,
+    watch: watch_4.reload,
     status: 'confirmed',
     start_date: '3 Janvier 2020',
     end_date: '6 Janvier 2020'
