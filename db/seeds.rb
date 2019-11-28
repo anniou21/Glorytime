@@ -213,7 +213,6 @@ CHRONOGRAPHE OMEGA CO‑AXIAL 41,5 MM",
     )
 # ]
 
-
 puts 'Creating Bookings...'
 bookings_attributes = [
   {
@@ -247,7 +246,7 @@ booking_items_attributes =[
     watch: watch_1.reload,
     status: 'pending',
     start_date: '23 Decembre 2019',
-    end_date: '26 Decembre 2019'
+    end_date: '26 Decembre 2019',
   },
   {
     booking: Booking.find_by(user: User.find_by(name: 'Etienne')),

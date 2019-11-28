@@ -1,6 +1,6 @@
 class WatchesController < ApplicationController
   def index
-    @watches = Watches.all
+    @watches = Watch.all
   end
 
   def show
