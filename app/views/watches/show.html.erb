@@ -1,161 +1,78 @@
 
 <div class="searchbar-div">
-              <form class="search">
-                <div class="form-row">
-                  <div class="col-5">
-                    <input type="text" class="form-control" placeholder="ex: Rolex">
-                  </div>
-                  <div class="col">
-                    <input type="text" class="form-control" placeholder="Marque">
-                  </div>
-                  <div class="col">
-                    <input type="text" class="form-control" placeholder="Model">
-                  </div>
-                  <div class="col">
-                    <input type="text" class="form-control" placeholder="Prix">
-                  </div>
-                  <div class="col">
-                      <button type="submit" class="btn btn-flat">Rechercher
-                      </button>
-
-                  </div>
-                </div>
-              </form>
+  <form class="search">
+    <div class="form-row">
+      <div class="col-5">
+        <input type="text" class="form-control" placeholder="ex: Rolex">
+      </div>
+      <div class="col">
+        <input type="text" class="form-control" placeholder="Marque">
+      </div>
+      <div class="col">
+        <input type="text" class="form-control" placeholder="Model">
+      </div>
+      <div class="col">
+        <input type="text" class="form-control" placeholder="Prix">
+      </div>
+      <div class="col">
+          <button type="submit" class="btn btn-flat">
+            Rechercher
+          </button>
+      </div>
+    </div>
+  </form>
 </div>
 
-<!DOCTYPE html>
-<html>
-  <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Product Page</title>
-  </head>
-<body>
+
+
 <div class="container">
-      <div class="card">
-      <div class="card-body row ">
-          <div class="col-sm-12 col-md-6" id="image-container">
-                <div id="main-img">
-                    <main class="primary" style="background-image:url(https://www.iwc.com/content/dam/rcq/iwc/19/41/90/4/1941904.png.transform.global_image_png_320_2x.png" class="mx-auto"></main>
-              </div>
-              <div class="container-fluid">
-                  <div class="row mx-auto" id="thumbnail-container">
-                       <a href="#" class="thumbnail selected" data-big="https://source.unsplash.com/200x300/?icecream">
-                           <div class="thumb" style="background-image:url(https://source.unsplash.com/200x300/?watch); background-size:cover;">
-                           </div>
-                       </a>
-                      <a href="#" class="thumbnail" data-big="https://source.unsplash.com/200x300/?sundae">
-                           <div class="thumb" style="background-image:url(https://source.unsplash.com/200x300/?watch); background-size:cover;">
-                           </div>
-                       </a>
+  <div class="card">
+    <div class="card-body row ">
 
-                  </div>
-              </div>
-              <span id="favorite-button" onclick="favoriteAdd()" class="btn"><i class="fa fa-heart"></i></span>
+      <div class="col-sm-12 col-md-6" id="image-container">
+        <div id="main-img">
+          <main class="primary" style="background-image:url(https://www.iwc.com/content/dam/rcq/iwc/19/41/90/4/1941904.png.transform.global_image_png_320_2x.png" class="mx-auto"></main>
+        </div>
+
+        <div class="container-fluid">
+          <div class="row mx-auto" id="thumbnail-container">
+            <a href="#" class="thumbnail selected" data-big="https://source.unsplash.com/200x300/?icecream">
+              <div class="thumb" style="background-image:url(https://source.unsplash.com/200x300/?watch); background-size:cover;"></div>
+            </a>
+            <a href="#" class="thumbnail" data-big="https://source.unsplash.com/200x300/?sundae">
+              <div class="thumb" style="background-image:url(https://source.unsplash.com/200x300/?watch); background-size:cover;"></div>
+            </a>
           </div>
-          <div class="col-sm-12 col-md-6" id="product-information">
-             <h2 class="p-0 m-0" id="product-title">IWC</h2>
-              <span id="product-short"><small>PORTUGIESER CHRONOGRAPHE</small></span>
-            <div class="container-fluid">
-                          <div class="row">
-                            <span id="old-price" class="text-danger"></span><h5 id="price">500.00€</h5>
-                          </div>
-            </div>
-             <div id="product-variables">
-                 <p>Description: Boîtier en Acier fin , Remontage automatique, Diamètre 40.9 mm.
-
-Fabriqué à Schaffhausen, en Suisse. </p>
-
-                 <div id="text">
-
-                 </div>
-             </div>
-
-               <div id="add-to-cart" class="">
-                   <button class="btn btn-flat"> LOUER</button>
-               </div>
-          </div>
-
+        </div>
+        <span id="favorite-button" onclick="favoriteAdd()" class="btn"><i class="fa fa-heart"></i></span>
       </div>
+
+      <div class="col-sm-12 col-md-6" id="product-information">
+        <h2 class="p-0 m-0" id="product-title">IWC</h2>
+          <span id="product-short"><small>PORTUGIESER CHRONOGRAPHE</small></span>
+          <div class="container-fluid">
+            <div class="row">
+              <span id="old-price" class="text-danger"></span><h5 id="price">500.00€</h5>
+            </div>
+          </div>
+
+          <div id="product-variables">
+            <p>
+              Description: Boîtier en Acier fin , Remontage automatique, Diamètre 40.9 mm.
+              Fabriqué à Schaffhausen, en Suisse.
+            </p>
+            <div id="text"></div>
+          </div>
+
+          <div id="add-to-cart">
+            <%= simple_form_for([@booking, @booking_item]) do |f| %>
+              <%= f.input :watch_id, wrapper_html: { class: 'd-none' } %>
+              <!-- datepicker -->
+              <%= f.submit 'LOUER', class: "btn btn-flat" %>
+            <% end %>
+          </div>
+        </div>
+
+    </div>
   </div> <!-- end card -->
 </div> <!-- end container-->
-  </body>
-</html>
-
-=======
-<h1>Watches#show</h1>
-<p>Find me in app/views/watches/show.html.erb</p>
-<div class="container">
-  <div class="container-show d-flex justify-content-center">
-      <div class="element1">
-          <img src="https://www.tagheuer.com/sites/default/files/styles/product_block_header/public/2019-10/CV2A1V.BA0738-SOLDAT.png?itok=TYNLIqoo", width="300">
-      </div>
-      <div class="element2">
-            <div class="name">
-                    <h2 class="text-center">WATCH</h2>
-                    <p >IWC</p>
-                    <p>Iconographe</p>
-                    <p>250€</p>
-            </div>
-            <div class="description">
-                  <h1>DESCRIPTION</h1>
-                  <p class="text-justify">lkfhelfjbzefhkzeblfjbezlfj</p>
-            </div>
-            <div>
-              <%= link_to 'Réservez votre montre', bookings_path, class: "btn btn-success" %>
-            </div>
-      </div>
-  </div>
-<!-- shops et map -->
-  <div class="container-show d-flex justify-content-center">
-      <div class="element3">
-        <div class="shop">
-                      <h2 class="text-center">Shop</h2>
-                      <p >L'annioutise</p>
-                      <p>Description du shop</p>
-              </div>
-      </div>
-      <div class="element4 justify-content-center">
-        <div class="map">
-                      <h2 class="text-center">VOICI LA MAP</h2>
-              </div>
-      </div>
-  </div>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-<!-- Carousel -->
-
-  <div id="map" style="width: 620px; height: 300px;" data-markers="<%= @markers.to_json %>"
-  data-mapbox-api-key="pk.eyJ1IjoidGl0cyIsImEiOiJjazM4eHMzZ2IwNnBhM2RrcTRqcXNsemMzIn0.AUIXIPVA3rDDaINnb2S2CQ">
-  </div>
-
-  <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img class="d-block w-10 vh-10" src="https://www.tagheuer.com/sites/default/files/styles/product_block_header/public/2019-10/CV2A1V.BA0738-SOLDAT.png?itok=TYNLIqoo" alt="First slide">
-    </div>
-    <div class="carousel-item">
-      <img class="d-block w-10 vh-10" src="https://www.tagheuer.com/sites/default/files/styles/product_block_header/public/2019-10/CV2A1V.BA0738-SOLDAT.png?itok=TYNLIqoo" alt="Second slide">
-    </div>
-  </div>
-  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div>
-</div>
