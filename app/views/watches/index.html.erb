@@ -23,27 +23,26 @@
 </div>
 
 <div class="grid m-5">
+  <% @watches.each do |watch| %>
   <div class="container">
     <div class="row">
       <div class="col-md-4">
           <div class="card d-flex justify-content-around align-items-center">
             <img src="https://www.iwc.com/content/dam/rcq/iwc/19/41/90/4/1941904.png.transform.global_image_png_320_2x.png" alt="" width="210" >
             <div class="card-body text-center">
-              <p class="card-text1 text-center">IWC</p>
-              <p class="card-text2 text-center">PORTUGIESER CHRONOGRAPHE</p>
+              <p class="card-text1 text-center"><%= watch.brand %></p>
+              <p class="card-text2 text-center"><%= watch.model %><br/></p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
                   <button type="button" class="btn btn-ghost"><%= link_to 'Voir', watch_path(@watches) %></button>
                 </div>
-                <small class="text-muted">5.900 €</small>
+                <small class="text-muted"><%= watch.price * 1000 %> €</small>
               </div>
             </div>
           </div>
         </div>
-      <div class="col-md-4"></div>
-      <div class="col-md-4"></div>
+        <% end %>
     </div>
-
   </div>
 </div>
 
