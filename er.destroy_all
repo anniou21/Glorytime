@@ -1,0 +1,33 @@
+=> [[32m#<Shop:0x00007fd4d44ddd60[0m
+  id: [1;34m9[0m,
+  name: [31m[1;31m"[0m[31mChamps d'Or[1;31m"[0m[31m[0m,
+  description:
+   [31m[1;31m"[0m[31mCette bijouterie vend montres, bijoux, maroquinerie et stylos, neufs ou d’occasion, de marques haut de gamme.[1;31m"[0m[31m[0m,
+  user_id: [1;34m21[0m,
+  created_at: [1;34;4mThu[0m, [1;34m28[0m [1;34;4mNov[0m [1;34m2019[0m [1;34m10[0m:[1;34m34[0m:[1;34m36[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m,
+  updated_at: [1;34;4mThu[0m, [1;34m28[0m [1;34;4mNov[0m [1;34m2019[0m [1;34m10[0m:[1;34m34[0m:[1;34m36[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m,
+  address: [31m[1;31m"[0m[31m6 Avenue Francklin Delano Roosevelt[1;31m"[0m[31m[0m[32m>[0m,
+ [32m#<Shop:0x00007fd4d44dd928[0m
+  id: [1;34m10[0m,
+  name: [31m[1;31m"[0m[31mEuro Art et Collection[1;31m"[0m[31m[0m,
+  description: [31m[1;31m"[0m[31mCette boutique vend montres neufs ou d’occasion, de marques haut de gamme.[1;31m"[0m[31m[0m,
+  user_id: [1;34m22[0m,
+  created_at: [1;34;4mThu[0m, [1;34m28[0m [1;34;4mNov[0m [1;34m2019[0m [1;34m10[0m:[1;34m34[0m:[1;34m36[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m,
+  updated_at: [1;34;4mThu[0m, [1;34m28[0m [1;34;4mNov[0m [1;34m2019[0m [1;34m10[0m:[1;34m34[0m:[1;34m36[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m,
+  address: [31m[1;31m"[0m[31m5 Rue de la Grange Batelière[1;31m"[0m[31m[0m[32m>[0m,
+ [32m#<Shop:0x00007fd4d44dd6f8[0m
+  id: [1;34m11[0m,
+  name: [31m[1;31m"[0m[31mCharlie Watch - Paris[1;31m"[0m[31m[0m,
+  description: [31m[1;31m"[0m[31mCette boutique mets à disposition des montres de marques haut de gamme.[1;31m"[0m[31m[0m,
+  user_id: [1;34m23[0m,
+  created_at: [1;34;4mThu[0m, [1;34m28[0m [1;34;4mNov[0m [1;34m2019[0m [1;34m10[0m:[1;34m34[0m:[1;34m36[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m,
+  updated_at: [1;34;4mThu[0m, [1;34m28[0m [1;34;4mNov[0m [1;34m2019[0m [1;34m10[0m:[1;34m34[0m:[1;34m36[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m,
+  address: [31m[1;31m"[0m[31m26 Rue Pastourelle[1;31m"[0m[31m[0m[32m>[0m,
+ [32m#<Shop:0x00007fd4d44dd428[0m
+  id: [1;34m12[0m,
+  name: [31m[1;31m"[0m[31mAtelier R.de Fèbres[1;31m"[0m[31m[0m,
+  description: [31m[1;31m"[0m[31mCette boutique mets à disposition des montres de marques haut de gamme.[1;31m"[0m[31m[0m,
+  user_id: [1;34m24[0m,
+  created_at: [1;34;4mThu[0m, [1;34m28[0m [1;34;4mNov[0m [1;34m2019[0m [1;34m10[0m:[1;34m34[0m:[1;34m36[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m,
+  updated_at: [1;34;4mThu[0m, [1;34m28[0m [1;34;4mNov[0m [1;34m2019[0m [1;34m10[0m:[1;34m34[0m:[1;34m36[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m,
+  address: [31m[1;31m"[0m[31m7 Rue de Rome[1;31m"[0m[31m[0m[32m>[0m]

@@ -1,3 +1,89 @@
+
+<div class="searchbar-div">
+              <form class="search">
+                <div class="form-row">
+                  <div class="col-5">
+                    <input type="text" class="form-control" placeholder="ex: Rolex">
+                  </div>
+                  <div class="col">
+                    <input type="text" class="form-control" placeholder="Marque">
+                  </div>
+                  <div class="col">
+                    <input type="text" class="form-control" placeholder="Model">
+                  </div>
+                  <div class="col">
+                    <input type="text" class="form-control" placeholder="Prix">
+                  </div>
+                  <div class="col">
+                      <button type="submit" class="btn btn-flat">Rechercher
+                      </button>
+
+                  </div>
+                </div>
+              </form>
+</div>
+
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Product Page</title>
+  </head>
+<body>
+<div class="container">
+      <div class="card">
+      <div class="card-body row ">
+          <div class="col-sm-12 col-md-6" id="image-container">
+                <div id="main-img">
+                    <main class="primary" style="background-image:url(https://www.iwc.com/content/dam/rcq/iwc/19/41/90/4/1941904.png.transform.global_image_png_320_2x.png" class="mx-auto"></main>
+              </div>
+              <div class="container-fluid">
+                  <div class="row mx-auto" id="thumbnail-container">
+                       <a href="#" class="thumbnail selected" data-big="https://source.unsplash.com/200x300/?icecream">
+                           <div class="thumb" style="background-image:url(https://source.unsplash.com/200x300/?watch); background-size:cover;">
+                           </div>
+                       </a>
+                      <a href="#" class="thumbnail" data-big="https://source.unsplash.com/200x300/?sundae">
+                           <div class="thumb" style="background-image:url(https://source.unsplash.com/200x300/?watch); background-size:cover;">
+                           </div>
+                       </a>
+
+                  </div>
+              </div>
+              <span id="favorite-button" onclick="favoriteAdd()" class="btn"><i class="fa fa-heart"></i></span>
+          </div>
+          <div class="col-sm-12 col-md-6" id="product-information">
+             <h2 class="p-0 m-0" id="product-title">IWC</h2>
+              <span id="product-short"><small>PORTUGIESER CHRONOGRAPHE</small></span>
+            <div class="container-fluid">
+                          <div class="row">
+                            <span id="old-price" class="text-danger"></span><h5 id="price">500.00€</h5>
+                          </div>
+            </div>
+             <div id="product-variables">
+                 <p>Description: Boîtier en Acier fin , Remontage automatique, Diamètre 40.9 mm.
+
+Fabriqué à Schaffhausen, en Suisse. </p>
+
+                 <div id="text">
+
+                 </div>
+             </div>
+
+               <div id="add-to-cart" class="">
+                   <button class="btn btn-flat"> LOUER</button>
+               </div>
+          </div>
+
+      </div>
+  </div> <!-- end card -->
+</div> <!-- end container-->
+  </body>
+</html>
+
+=======
 <h1>Watches#show</h1>
 <p>Find me in app/views/watches/show.html.erb</p>
 <div class="container">
