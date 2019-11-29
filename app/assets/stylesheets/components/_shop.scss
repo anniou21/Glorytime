@@ -5,7 +5,7 @@
 }
 
 .card-trip > img {
-  height: 200px;
+  height: 400px;
   width: 100%;
   object-fit: cover;
 }
@@ -34,7 +34,35 @@
 .card-trip-infos .card-trip-user {
   position: absolute;
   right: 16px;
-  top: -20px;
-  width: 40px;
+  top: 495px;
+  width: 100px;
+}
+
+.container-info {
+background-color: #ebefd0;
+padding: 109px;
+padding-right: 109px;
+padding-right: 109px;
+flexbox: 118px;
+padding-right: 80px;
+margin-right: 650px;
+}
+
+.carousel-wrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  // height: 500px;
+}
+
+.carousel_content {
+  position: absolute;
+  top:-100%; left:0; right: 0; bottom:-100%;
+  margin: auto;
+}
+
+.container2 {
+  // margin-top: -14%;
+  padding: 0;
 }
 
