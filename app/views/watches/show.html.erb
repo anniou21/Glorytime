@@ -67,7 +67,13 @@
           <div id="add-to-cart">
             <%= simple_form_for([@booking, @booking_item]) do |f| %>
               <%= f.input :watch_id, wrapper_html: { class: 'd-none' } %>
-              <!-- datepicker -->
+              <div>
+                <h2>Période de location</h2>
+                <%= f.input :start_date, as: :string, required: false, input_html: {class: "datepicker"} %>
+<!--                 <input type="text" id="rangeDate" placeholder="Choisissez vos dates" data-input>
+ -->                <!-- <raise> -->
+                </div>
+              </div>
               <%= f.submit 'LOUER', class: "btn btn-flat" %>
             <% end %>
           </div>
