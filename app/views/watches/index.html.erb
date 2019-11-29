@@ -1,10 +1,10 @@
 <div class="searchbar-div">
 
 
-               <%= form_tag watches_path, class:"form-inline my-2 my-lg-0", id:"search_field", method: :get do %>
+               <%= form_tag watches_path,class:"form-inline my-2 my-lg-0", id:"search_field", method: :get do %>
 
                     <%= text_field_tag :query,
-                    params[:query],
+                    params[:query], style:'width:2000px',
                     class: "form-control",
                     type: "search",
                     placeholder: "Rolex" %>
@@ -16,26 +16,7 @@
 
 
 
-<!--                 <form class="search">
 
-                <div class="form-row">
-                  <div class="col-5">
-                    <input type="text" class="form-control" placeholder="ex: Rolex">
-                  </div>
-                  <div class="col">
-                    <input type="text" class="form-control" placeholder="Marque">
-                  </div>
-                  <div class="col">
-                    <input type="text" class="form-control" placeholder="Model">
-                  </div>
-                  <div class="col">
-                      <button type="submit" class="btn btn-flat">Rechercher
-
-                      </button>
-
-                  </div>
-                </div>
-              </form> -->
 </div>
 
 <div class="grid m-5">
