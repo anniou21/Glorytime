@@ -1,26 +1,15 @@
 
 <div class="searchbar-div">
-              <form class="search">
-                <div class="form-row">
-                  <div class="col-5">
-                    <input type="text" class="form-control" placeholder="ex: Rolex">
-                  </div>
-                  <div class="col">
-                    <input type="text" class="form-control" placeholder="Marque">
-                  </div>
-                  <div class="col">
-                    <input type="text" class="form-control" placeholder="Model">
-                  </div>
-                  <div class="col">
-                    <input type="text" class="form-control" placeholder="Prix">
-                  </div>
-                  <div class="col">
-                      <button type="submit" class="btn btn-flat">Rechercher
-                      </button>
+           <%= form_tag watches_path, class:"form-inline my-2 my-lg-0", id:"search_field", method: :get do %>
 
-                  </div>
-                </div>
-              </form>
+                    <%= text_field_tag :query,
+                    params[:query],
+                    class: "form-control",
+                    type: "search",
+                    placeholder: "Rolex" %>
+
+                <%= submit_tag "Search", class: "btn btn-warning" %>
+                <% end %>
 </div>
 
 <!DOCTYPE html>
@@ -83,7 +72,6 @@ Fabriqué à Schaffhausen, en Suisse. </p>
   </body>
 </html>
 
-=======
 <h1>Watches#show</h1>
 <p>Find me in app/views/watches/show.html.erb</p>
 <div class="container">
