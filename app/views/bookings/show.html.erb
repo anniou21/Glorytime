@@ -1,10 +1,10 @@
-<H1>Détails de la location</H1>
+<H1>Détails d'une réservation</H1>
 <br>
-watch : <% @booking_item.each do |id| %>
+Montre : <% @booking_item.each do |id| %>
 <%  if BookingItem.find(id).watch %>
 <%=  BookingItem.find(id).watch.model %>
 <% end %>
-<% end %>
+<% end %><br>
 
 
 Statut: <%= @booking.status %><br>

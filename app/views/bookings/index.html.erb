@@ -1,8 +1,9 @@
-
+<H1>Historique des paniers</H1>
 <div class="container mt-5">
     <div class="book">
       <% @bookings.each do |booking| %>
-        <%= link_to "Booking #{booking.id}", booking_path(booking) %>
+        <div><%= link_to "Booking #{booking.id}", booking_path(booking) %></div>
       <% end %>
     </div>
 </div>
+<raise>
