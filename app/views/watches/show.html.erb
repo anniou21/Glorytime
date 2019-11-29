@@ -51,7 +51,7 @@
               <span id="product-short"><small>PORTUGIESER CHRONOGRAPHE</small></span>
             <div class="container-fluid">
                           <div class="row">
-                            <span id="old-price" class="text-danger"></span><h5 id="price">500.00€</h5>
+                            <span id="old-price" class="text-danger"></span><h5 id="price">100 €/jours</h5>
                           </div>
             </div>
              <div id="product-variables">
@@ -65,7 +65,7 @@ Fabriqué à Schaffhausen, en Suisse. </p>
              </div>
 
                <div id="add-to-cart" class="">
-                   <button class="btn btn-flat"> LOUER</button>
+                <%= link_to '<i class="fas fa-plus"></i> Ajouter'.html_safe, bookings_path, class:'btn btn-flat' %>
                </div>
           </div>
 
@@ -112,7 +112,7 @@ Boutique de Montres et bijoux de luxe : Horlogerie, Joaillerie</small></span>
              </div>
 
                <div id="add-to-cart" class="">
-                   <button class="btn btn-flat"> En savoir plus</button>
+                   <%= link_to 'En savoir plus'.html_safe, class:'btn btn-flat' %>
                </div>
           </div>
 
