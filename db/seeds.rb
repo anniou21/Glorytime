@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-
+require 'open-uri'
 
 puts 'Cleaning database...'
 [Review, BookingItem, Booking, Shop, User, Watch].each(&:destroy_all)
