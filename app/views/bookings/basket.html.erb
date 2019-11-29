@@ -1,0 +1,7 @@
+<H1>Panier</H1>
+
+<% @bookings.each do |booking| %>
+<%= booking.user.name %>
+<%= booking.status %>
+<% end %>
+

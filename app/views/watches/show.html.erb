@@ -83,7 +83,6 @@ Fabriqué à Schaffhausen, en Suisse. </p>
       </div>
     </div>
   </div>
-</div>
 
 <div class="container">
 
@@ -106,6 +105,7 @@ Boutique de Montres et bijoux de luxe : Horlogerie, Joaillerie</small></span>
             <div class="container-fluid">
                           <div class="row">
 
+
                           </div>
             </div>
              <div id="product-variables">
@@ -125,5 +125,64 @@ Boutique de Montres et bijoux de luxe : Horlogerie, Joaillerie</small></span>
 </div>
 
 
+</div> <!-- end container-->
+
+<!-- START SHOP -->
+<div class="container">
+  <div class="card">
+    <div class="card-body row ">
+
+      <div class="col-sm-12 col-md-6" id="image-container">
+        <div id="main-img">
+          <main class="primary" style="background-image:url(https://www.iwc.com/content/dam/rcq/iwc/19/41/90/4/1941904.png.transform.global_image_png_320_2x.png" class="mx-auto"></main>
+        </div>
+
+        <div class="container-fluid">
+          <div class="row mx-auto" id="thumbnail-container">
+            <a href="#" class="thumbnail selected" data-big="https://source.unsplash.com/200x300/?icecream">
+              <div class="thumb" style="background-image:url(https://source.unsplash.com/200x300/?watch); background-size:cover;"></div>
+            </a>
+            <a href="#" class="thumbnail" data-big="https://source.unsplash.com/200x300/?sundae">
+              <div class="thumb" style="background-image:url(https://source.unsplash.com/200x300/?watch); background-size:cover;"></div>
+            </a>
+          </div>
+        </div>
+        <span id="favorite-button" onclick="favoriteAdd()" class="btn"><i class="fa fa-heart"></i></span>
+      </div>
+
+      <div class="col-sm-12 col-md-6" id="product-information">
+        <h2 class="p-0 m-0" id="product-title">IWC</h2>
+          <span id="product-short"><small>PORTUGIESER CHRONOGRAPHE</small></span>
+          <div class="container-fluid">
+            <div class="row">
+              <span id="old-price" class="text-danger"></span><h5 id="price">500.00€</h5>
+            </div>
+          </div>
+
+          <div id="product-variables">
+            <p>
+              Description: Boîtier en Acier fin , Remontage automatique, Diamètre 40.9 mm.
+              Fabriqué à Schaffhausen, en Suisse.
+            </p>
+            <div id="text"></div>
+          </div>
+
+          <div id="add-to-cart">
+            <%= simple_form_for([@booking, @booking_item]) do |f| %>
+              <%= f.input :watch_id, wrapper_html: { class: 'd-none' } %>
+              <div>
+                <h2>Période de location</h2>
+                <%= f.input :start_date, as: :string, required: false, input_html: {class: "datepicker"} %>
+<!--                 <input type="text" id="rangeDate" placeholder="Choisissez vos dates" data-input>
+ -->                <!-- <raise> -->
+                </div>
+              </div>
+              <%= f.submit 'LOUER', class: "btn btn-flat" %>
+            <% end %>
+          </div>
+        </div>
+
+    </div>
+  </div> <!-- end card -->
 </div> <!-- end container-->
 

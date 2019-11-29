@@ -73,19 +73,14 @@
                 <td><%= b.booking_items.first.end_date.strftime("%d/%m/%Y") %></td>
 
 
-                <td><%= b.booking_items.count %>
+                <td>
                   <div id="accordion">
-                      <div class="card">
-                        <div class="card-header" id="headingOne">
-                          <h5 class="mb-0">
-                            <% key = "collapse#{b.id}" %>
-                          <button class="btn btn-link" data-toggle="collapse" data-target='#<%= key %>' aria-expanded="true" aria-controls='<%= key %>'>
-                          View details
-                          </button>
-                          </h5>
-                        </div>
+                    <% key = "collapse#{b.id}" %>
+                    <button class="btn btn-link" data-toggle="collapse" data-target='#<%= key %>' aria-expanded="true" aria-controls='<%= key %>'>
+                      <%= b.booking_items.count %>  >>> View details
 
-                        <div id='<%= key %>' class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                    </button>
+                        <div id='<%= key %>' class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
                           <div class="card-body">
                             <%= b.watches.count %>
                             <% b.watches.each do |watch| %>

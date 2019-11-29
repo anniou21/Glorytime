@@ -112,3 +112,25 @@ body {
   border: 1px solid #ED9E00;
 }
 
+.container{
+
+  margin:100px;
+}
+
+.col-md-3 {
+
+    -webkit-box-flex: 0;
+    flex: 0 0 25%;
+    max-width: 25%;
+    margin-block-end: 200px;
+    margin-block-start: 57px;
+    margin-left: -56px;
+  }
+
+.table th, .table td {
+    padding: 0.75rem;
+    vertical-align: top;
+    border-top: 5px solid
+#dee2e6;
+}
+

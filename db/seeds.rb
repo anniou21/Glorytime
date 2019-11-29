@@ -226,7 +226,7 @@ bookings_attributes = [
     user: User.find_by(name:'Etienne')
   },
   {
-    status: 'confirmed',
+    status: 'pending',
     price_total: 1300,
     user: User.find_by(name:'Anniou')
   },
