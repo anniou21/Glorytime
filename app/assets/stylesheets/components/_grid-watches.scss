@@ -3,9 +3,9 @@
 }
 
 .card-text1 {
-    font-family: 'Merriweather', serif;
-    font-size: 18px;
-    color: #bcbcbc;
+  font-family: 'Merriweather', serif;
+  font-size: 18px;
+  color: #bcbcbc;
 }
 
 
@@ -15,4 +15,11 @@
   color: #434343;
   line-height: 25px;
   padding-bottom: 12px;
+}
+
+
+.cards{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 2px;
 }

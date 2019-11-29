@@ -1,30 +1,133 @@
-
 <div class="searchbar-div">
-  <form class="search">
-    <div class="form-row">
-      <div class="col-5">
-        <input type="text" class="form-control" placeholder="ex: Rolex">
-      </div>
-      <div class="col">
-        <input type="text" class="form-control" placeholder="Marque">
-      </div>
-      <div class="col">
-        <input type="text" class="form-control" placeholder="Model">
-      </div>
-      <div class="col">
-        <input type="text" class="form-control" placeholder="Prix">
-      </div>
-      <div class="col">
-          <button type="submit" class="btn btn-flat">
-            Rechercher
-          </button>
-      </div>
-    </div>
-  </form>
+              <form class="search">
+                <div class="form-row">
+                  <div class="col-5">
+                    <input type="text" class="form-control" placeholder="ex: Rolex">
+                  </div>
+                  <div class="col">
+                    <input type="text" class="form-control" placeholder="Marque">
+                  </div>
+                  <div class="col">
+                    <input type="text" class="form-control" placeholder="Model">
+                  </div>
+                  <div class="col">
+                    <input type="text" class="form-control" placeholder="Prix">
+                  </div>
+                  <div class="col">
+                      <button type="submit" class="btn btn-flat">Rechercher
+                      </button>
+
+                  </div>
+                </div>
+              </form>
 </div>
 
 
 
+<div class="container">
+      <div class="card">
+      <div class="card-body row ">
+          <div class="col-sm-12 col-md-6" id="image-container">
+                <div id="main-img">
+                    <main class="primary" style="background-image:url(https://www.iwc.com/content/dam/rcq/iwc/19/41/90/4/1941904.png.transform.global_image_png_320_2x.png" class="mx-auto"></main>
+              </div>
+              <div class="container-fluid">
+                  <div class="row mx-auto" id="thumbnail-container">
+                       <a href="#" class="thumbnail selected" data-big="https://source.unsplash.com/200x300/?icecream">
+                           <div class="thumb" style="background-image:url(https://source.unsplash.com/200x300/?watch); background-size:cover;">
+                           </div>
+                       </a>
+                      <a href="#" class="thumbnail" data-big="https://source.unsplash.com/200x300/?sundae">
+                           <div class="thumb" style="background-image:url(https://source.unsplash.com/200x300/?watch); background-size:cover;">
+                           </div>
+                       </a>
+
+                  </div>
+              </div>
+              <span id="favorite-button" onclick="favoriteAdd()" class="btn"><i class="fa fa-heart"></i></span>
+          </div>
+          <div class="col-sm-12 col-md-6" id="product-information">
+             <h2 class="p-0 m-0" id="product-title">IWC</h2>
+              <span id="product-short"><small>PORTUGIESER CHRONOGRAPHE</small></span>
+            <div class="container-fluid">
+                          <div class="row">
+                            <span id="old-price" class="text-danger"></span><h5 id="price">500.00€</h5>
+                          </div>
+            </div>
+             <div id="product-variables">
+                 <p>Description: Boîtier en Acier fin , Remontage automatique, Diamètre 40.9 mm.
+
+Fabriqué à Schaffhausen, en Suisse. </p>
+
+                 <div id="text">
+
+                 </div>
+             </div>
+
+               <div id="add-to-cart" class="">
+                   <button class="btn btn-flat"> LOUER</button>
+               </div>
+          </div>
+
+      </div>
+  </div> <!-- end card -->
+</div>
+
+<div class="banner-watch">
+  <div class="container">
+    <h1>Et vous, quelle montre allez-vous loué ?</h1>
+    <div id="container">
+      <div id="searchbar">
+        <input type="text" id="topics" style="float:left"/><input type="hidden" id="topicID" placeholder="Rolex, IWC, Submariner ..." />
+        <div id="btn" onclick="checkWeb()" style="float:left"><%= link_to "Les montres", "#", class: "btn btn-flat" %></div>
+      </div>
+    </div>
+  </div>
+
+<div class="container">
+
+  <div class="card">
+  <div class="card-body row ">
+          <div class="col-sm-12 col-md-6" id="image-container">
+                <div id="main-img">
+                    <%= image_tag 'map.png', width: 400, class:'m-3'%>
+              </div>
+              <div class="container-fluid">
+                  <div class="row mx-auto" id="thumbnail-container">
+                       <p><strong>Adresse :</strong> 6 Avenue Franklin Delano Roosevelt, 75008 Paris</p>
+                  </div>
+              </div>
+          </div>
+          <div class="col-sm-12 col-md-6" id="product-information">
+             <h2 class="p-0 m-0" id="product-title"><%=  %></h2>
+              <span id="product-short"><small>
+Boutique de Montres et bijoux de luxe : Horlogerie, Joaillerie</small></span>
+            <div class="container-fluid">
+                          <div class="row">
+
+
+                          </div>
+            </div>
+             <div id="product-variables">
+                 <p>Une boutique spécialiste de bijoux et d'horlogerie, nos clients sont satisfaits de nos services. Spécialiste aussi dans la réparation et la location de montres de luxe. Parfait pour les petites occasions.</p>
+
+                 <div id="text">
+
+                 </div>
+             </div>
+
+               <div id="add-to-cart" class="">
+                   <button class="btn btn-flat"> En savoir plus</button>
+               </div>
+          </div>
+
+      </div>
+</div>
+
+
+</div> <!-- end container-->
+
+<!-- START SHOP -->
 <div class="container">
   <div class="card">
     <div class="card-body row ">
@@ -82,3 +185,4 @@
     </div>
   </div> <!-- end card -->
 </div> <!-- end container-->
+
