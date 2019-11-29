@@ -146,6 +146,7 @@ puts 'Creating Watches...'
     price: 4300,
     description: "De 41 mm de diamètre, son boîtier renferme un mouvement automatique de calibre 16, vous permettant l'affichage de la date par guichet ainsi que l'animation de son cadran sombre et de la fonction chronographe.",
     availability: true,
+    cost_per_day: 100,
     shop: Shop.find_by(name: "Champs d'Or")
   )
   watch_1.photo.attach(
@@ -160,6 +161,7 @@ puts 'Creating Watches...'
     price: 5950,
     description: " À l’occasion du 50e anniversaire de la TAG Heuer Monaco, la Maison lance une édition limitée à seulement 169 exemplaires aux côtés de quatre autres montres exclusives.",
     availability: true,
+    cost_per_day: 100,
     shop: Shop.find_by(name: "Champs d'Or")
   )
   watch_2.photo.attach(
@@ -174,6 +176,7 @@ puts 'Creating Watches...'
     price: 8600,
     description: "L’Ingenieur Chronographe est animé par le calibre de manufacture IWC 69375 avec remontage bidirectionnel à cliquets et réserve de marche de 46 heures.",
     availability: true,
+    cost_per_day: 100,
     shop: Shop.find_by(name: "Champs d'Or")
   )
   watch_3.photo.attach(
@@ -188,6 +191,7 @@ puts 'Creating Watches...'
     price: 7450,
     description: "Depuis 1998, la Portugieser Chronographe est le modèle le plus convoité de la famille Portugieser. Elle était alors la première Portugieser permettant non seulement de lire le passage du temps, mais aussi de le chronométrer.",
     availability: true,
+    cost_per_day: 100,
     shop: Shop.find_by(name: "Champs d'Or")
   )
   watch_4.photo.attach(
@@ -204,6 +208,7 @@ CHRONOGRAPHE OMEGA CO‑AXIAL 41,5 MM",
     description: "Ce modèle arbore un cadran noir laqué ponctué d'un compteur des secondes à 9 heures et d'un compteur des heures et des minutes du chronographe à 3 heures. On trouve également une aiguille centrale des secondes du chronographe ainsi qu'un guichet de date à 6 heures.
 ",
     availability: true,
+    cost_per_day: 100,
     shop: Shop.find_by(name: "Euro Art et Collection")
   )
   watch_5.photo.attach(
@@ -218,6 +223,7 @@ CHRONOGRAPHE OMEGA CO‑AXIAL 41,5 MM",
     price: 15250,
     description: "Cette montre rompait avec les codes traditionnels de l'horlogerie en étant le premier chronographe spécialement conçu pour les pilotes professionnels, tout en étant parfaitement adapté à la conduite sportive occasionnelle ou à un usage quotidien classique",
     availability: true,
+    cost_per_day: 100,
     shop: Shop.find_by(name: "Champs d'or")
     )
    watch_6.photo.attach(
@@ -232,6 +238,7 @@ CHRONOGRAPHE OMEGA CO‑AXIAL 41,5 MM",
     price: 4050,
     description: "RESTEZ UNIQUE. Cette montre raffinée et fonctionnelle est la quintessence même du design d'avant-garde et de l'élégance éternelle.",
     availability: true,
+    cost_per_day: 100,
     shop: Shop.find_by(name: "Euro Art et Collection")
     )
    watch_7.photo.attach(
@@ -246,6 +253,7 @@ CHRONOGRAPHE OMEGA CO‑AXIAL 41,5 MM",
     price: 3750,
     description: "DESCENDEZ DANS LES PROFONDEURS. Depuis que nous avons déposé le brevet du premier boîtier étanche en 1895, nous n'avons cessé de braver les mers et d'envoyer les plongeurs toujours plus loin dans les noires profondeurs océaniques, comprises entre 100 et 1 000 m pour l'Aquagraph.",
     availability: true,
+    cost_per_day: 100,
     shop: Shop.find_by(name: "Charlie Watch - Paris")
     )
    watch_8.photo.attach(
@@ -260,6 +268,7 @@ CHRONOGRAPHE OMEGA CO‑AXIAL 41,5 MM",
     price: 4100,
     description: "CADRAN BLANC, BRACELET EN ACIER ET CÉRAMIQUE BLANCHE.",
     availability: true,
+    cost_per_day: 100,
     shop: Shop.find_by(name: "Atelier R.de Fèbres")
     )
    watch_9.photo.attach(
@@ -274,6 +283,7 @@ CHRONOGRAPHE OMEGA CO‑AXIAL 41,5 MM",
     price: 5700,
     description: "EN ROUTE ! Vitesse. Sueur. Puissance. Jack Heuer a créé la Carrera en 1963 en hommage à la célèbre Carrera Panamericana, une course automobile largement considérée comme étant la plus dangereuse au monde.",
     availability: true,
+    cost_per_day: 100,
     shop: Shop.find_by(name: "Euro Art et Collection")
     )
    watch_10.photo.attach(
@@ -288,6 +298,7 @@ CHRONOGRAPHE OMEGA CO‑AXIAL 41,5 MM",
     price: 5250,
     description: "SOYEZ UNE ICÔNE. Tout comme la ville éponyme et la course automobile qu'elle accueille, la Monaco est la quintessence de l'élégance et du prestige avec une touche de vintage.",
     availability: true,
+    cost_per_day: 100,
     shop: Shop.find_by(name: "Atelier R.de Fèbres")
     )
    watch_11.photo.attach(
@@ -302,6 +313,7 @@ CHRONOGRAPHE OMEGA CO‑AXIAL 41,5 MM",
     price: 2350,
     description: "DESCENDEZ DANS LES PROFONDEURS. Depuis que nous avons déposé le brevet du premier boîtier étanche en 1895, nous n'avons cessé de braver les mers et d'envoyer les plongeurs toujours plus loin dans les noires profondeurs océaniques, comprises entre 100 et 1 000 m pour l'Aquagraph.",
     availability: true,
+    cost_per_day: 100,
     shop: Shop.find_by(name: "Champs d'Or")
     )
    watch_12.photo.attach(
@@ -316,6 +328,7 @@ CHRONOGRAPHE OMEGA CO‑AXIAL 41,5 MM",
     price: 5550,
     description: "La Da Vinci Automatic 36 séduit avec son cadran bleu nuit et son bracelet en alligator de Santoni bleu nuit assorti. L’alternance d’éléments bleus, du boîtier en acier fin poli ultrabrillant et des cornes de bracelet forment un contraste saisissant.",
     availability: true,
+    cost_per_day: 100,
     shop: Shop.find_by(name: "Euro Art et Collection")
     )
    watch_13.photo.attach(
@@ -330,6 +343,7 @@ CHRONOGRAPHE OMEGA CO‑AXIAL 41,5 MM",
     price: 6750,
     description: "La montre dédiée à Cousteau est de construction identique à l’Aquatimer Chronographe. Le cadran épuré reprend le look de la première Aquatimer de 1967. Même avec trois compteurs et l’affichage de la date et du jour de la semaine, le cadran bleu du chronographe n’est pas surchargé.",
     availability: true,
+    cost_per_day: 100,
     shop: Shop.find_by(name: "Charlie Watch - Paris")
     )
    watch_14.photo.attach(
@@ -344,6 +358,7 @@ CHRONOGRAPHE OMEGA CO‑AXIAL 41,5 MM",
     price: 19100,
     description: "Sur le cadran de la Grande Montre d’Aviateur Calendrier Annuel Spitfire, le calendrier annuel indique, dans trois fenêtres distinctes, le mois, la date et le jour de la semaine. L’ordre correspond au format américain d’affichage de la date.",
     availability: true,
+    cost_per_day: 100,
     shop: Shop.find_by(name: "Atelier R.de Fèbres")
     )
    watch_15.photo.attach(
@@ -358,6 +373,7 @@ CHRONOGRAPHE OMEGA CO‑AXIAL 41,5 MM",
     price: 5350,
     description: "La Portofino Automatic avec cadran noir et bracelet à maille milanaise en acier fin est au choix proposée avec un bracelet en alligator. Un robuste mouvement automatique mécanique anime le tout.",
     availability: true,
+    cost_per_day: 100,
     shop: Shop.find_by(name: "Charlie Watch - Paris")
     )
    watch_16.photo.attach(
@@ -372,6 +388,7 @@ CHRONOGRAPHE OMEGA CO‑AXIAL 41,5 MM",
     price: 6150,
     description: "Pour la toute première fois, IWC présente une Montre d'Aviateur Chronographe animée par un mouvement de la gamme 69000, recouvert par un boîtier de seulement 41 millimètres.",
     availability: true,
+    cost_per_day: 100,
     shop: Shop.find_by(name: "Euro Art et Collection")
     )
    watch_17.photo.attach(
@@ -386,6 +403,7 @@ CHRONOGRAPHE OMEGA CO‑AXIAL 41,5 MM",
     price: 5350,
     description: "Elle demeure fidèle au design épuré de la célèbre montre de navigation Mark 11, créée en 1948 pour le compte de la Royal Air Force britannique.",
     availability: true,
+    cost_per_day: 100,
     shop: Shop.find_by(name: "Champs d'Or")
     )
    watch_18.photo.attach(
@@ -400,6 +418,7 @@ CHRONOGRAPHE OMEGA CO‑AXIAL 41,5 MM",
     price: 9950,
     description: "La céramique couleur sable s'inspire du désert des Mojaves, qui abrite la China Lake Naval Air Weapons Station, le plus grand complexe militaire détenu par l’US Navy.",
     availability: true,
+    cost_per_day: 100,
     shop: Shop.find_by(name: "Euro Art et Collection")
     )
    watch_19.photo.attach(
@@ -414,6 +433,7 @@ CHRONOGRAPHE OMEGA CO‑AXIAL 41,5 MM",
     price: 52200,
     description: "Dans le monde élitiste de la compétition automobile, Lewis Hamilton symbolise la mesure de toute chose. Le sextuple champion du monde n’hésite toutefois pas à surprendre et à lancer de nouvelles tendances avec ses tenues originales.",
     availability: true,
+    cost_per_day: 100,
     shop: Shop.find_by(name: "Euro Art et Collection")
     )
    watch_19.photo.attach(
@@ -428,6 +448,7 @@ CHRONOGRAPHE OMEGA CO‑AXIAL 41,5 MM",
     price: 52200,
     description: "Dans le monde élitiste de la compétition automobile, Lewis Hamilton symbolise la mesure de toute chose. Le sextuple champion du monde n’hésite toutefois pas à surprendre et à lancer de nouvelles tendances avec ses tenues originales.",
     availability: true,
+    cost_per_day: 100,
     shop: Shop.find_by(name: "Euro Art et Collection")
     )
    watch_19.photo.attach(
@@ -442,6 +463,7 @@ CHRONOGRAPHE OMEGA CO‑AXIAL 41,5 MM",
     price: 4700,
     description: "L'OMEGA Speedmaster est l'un des modèles les plus emblématiques de la Maison. Utilisée lors des six missions lunaires, la légendaire Speedmaster incarne à la perfection l'esprit pionnier et aventurier de la marque.",
     availability: true,
+    cost_per_day: 100,
     shop: Shop.find_by(name: "Charlie Watch - Paris")
     )
    watch_20.photo.attach(
@@ -456,6 +478,7 @@ CHRONOGRAPHE OMEGA CO‑AXIAL 41,5 MM",
     price: 7900,
     description: "L’esthétique reconnaissable et intemporelle de la collection OMEGA Constellation se caractérise par ses fameuses demi-lunes, la présence des célèbres « griffes » sur le boîtier et son bracelet mono-rang.",
     availability: true,
+    cost_per_day: 100,
     shop: Shop.find_by(name: "Atelier R.de Fèbres")
     )
    watch_21.photo.attach(
@@ -470,6 +493,7 @@ CHRONOGRAPHE OMEGA CO‑AXIAL 41,5 MM",
     price: 7300,
     description: "L’esthétique reconnaissable et intemporelle de la collection OMEGA Constellation se caractérise par ses fameuses demi-lunes, la présence des célèbres « griffes » sur le boîtier et son bracelet mono-rang.",
     availability: true,
+    cost_per_day: 100,
     shop: Shop.find_by(name: "Euro Art et Collection")
     )
    watch_22.photo.attach(
@@ -484,6 +508,7 @@ CHRONOGRAPHE OMEGA CO‑AXIAL 41,5 MM",
     price: 8100,
     description: "Afin de satisfaire les amateurs de longue date de la Seamaster Bullhead, OMEGA a réédité une version en édition limitée de ce chronographe emblématique. Le design du cadran de la nouvelle Bullhead reprend la puissance du modèle d'origine, avec sa lunette interne distinctive et les compteurs à 12 et 6 heures.",
     availability: true,
+    cost_per_day: 100,
     shop: Shop.find_by(name: "Champs d'Or")
     )
    watch_23.photo.attach(
@@ -498,6 +523,7 @@ CHRONOGRAPHE OMEGA CO‑AXIAL 41,5 MM",
     price: 40200,
     description: "Hommage aux toutes premières Seamaster de 1948, cette Édition Limitée exclusive reste fidèle au modèle d’après-guerre tout en adoptant les technologies actuelles.",
     availability: true,
+    cost_per_day: 100,
     shop: Shop.find_by(name: "Charlie Watch - Paris")
     )
    watch_24.photo.attach(
@@ -512,6 +538,7 @@ CHRONOGRAPHE OMEGA CO‑AXIAL 41,5 MM",
     price: 5300,
     description: "L’OMEGA Speedmaster est l’un des modèles les plus emblématiques de la Maison. Utilisée lors des six missions lunaires, la légendaire Speedmaster incarne à la perfection l’esprit pionnier et aventurier de la marque.",
     availability: true,
+    cost_per_day: 100,
     shop: Shop.find_by(name: "Atelier R.de Fèbres")
     )
    watch_25.photo.attach(
@@ -526,6 +553,7 @@ CHRONOGRAPHE OMEGA CO‑AXIAL 41,5 MM",
     price: 7500,
     description: "La collection Speedmaster 38 mm se caractérise par sa simplicité, sa taille unique et ses multiples coloris, tout en restant fidèle à l’esthétique et au patrimoine du plus célèbre des chronographes OMEGA.",
     availability: true,
+    cost_per_day: 100,
     shop: Shop.find_by(name: "Euro Art et Collection")
     )
    watch_26.photo.attach(
@@ -540,6 +568,7 @@ CHRONOGRAPHE OMEGA CO‑AXIAL 41,5 MM",
     price: 7600,
     description: "L'OMEGA Speedmaster est l'un des modèles les plus emblématiques de la Maison. Utilisée lors des six missions lunaires, la légendaire Speedmaster incarne à la perfection l'esprit pionnier et aventurier de la marque.",
     availability: true,
+    cost_per_day: 100,
     shop: Shop.find_by(name: "Champs d'Or")
     )
    watch_27.photo.attach(
@@ -554,6 +583,7 @@ CHRONOGRAPHE OMEGA CO‑AXIAL 41,5 MM",
     price: 5200,
     description: " Rolex utilise de l’acier Oystersteel pour fabriquer plusieurs éléments de l’habillage de ses montres. Spécialement développé par la marque, l’acier Oystersteel appartient à la famille des aciers 904L, des alliages principalement utilisés dans les secteurs des hautes technologies, de l’aérospatiale et de la chimie, là où la résistance à la corrosion doit être maximale.",
     availability: true,
+    cost_per_day: 100,
     shop: Shop.find_by(name: "Charlie Watch - Paris")
     )
    watch_28.photo.attach(
@@ -568,6 +598,7 @@ CHRONOGRAPHE OMEGA CO‑AXIAL 41,5 MM",
     price: 25250,
     description: " En disposant de sa propre fonderie, Rolex s’est donné les moyens de créer de nouveaux alliages d’or 18 ct exclusifs satisfaisant aux plus hautes normes de qualité. En fonction de la proportion d’argent, de cuivre, de platine ou de palladium ajoutée, différents types d’or 18 ct sont obtenus : jaune, rose ou gris. Ils sont réalisés uniquement à partir des métaux les plus purs.",
     availability: true,
+    cost_per_day: 100,
     shop: Shop.find_by(name: "Charlie Watch - Paris")
     )
    watch_29.photo.attach(
@@ -582,6 +613,7 @@ CHRONOGRAPHE OMEGA CO‑AXIAL 41,5 MM",
     price: 17950,
     description: "Le calibre 2236, un mouvement mécanique à remontage automatique de nouvelle génération entièrement développé et manufacturé par Rolex. Doté du spiral Syloxi en silicium breveté par Rolex, il offre des performances chronométriques superlatives.",
     availability: true,
+    cost_per_day: 100,
     shop: Shop.find_by(name: "Atelier R.de Fèbres")
     )
    watch_30.photo.attach(
@@ -596,6 +628,7 @@ CHRONOGRAPHE OMEGA CO‑AXIAL 41,5 MM",
     price: 5700,
     description: "L’Air-King est équipée du calibre 3131, un mouvement mécanique à remontage automatique entièrement développé et manufacturé par Rolex. Comme tous les mouvements Rolex Perpetual, le 3131 est certifié chronomètre suisse, une appellation réservée aux montres de haute précision ayant passé avec succès les tests du Contrôle officiel suisse des chronomètres.",
     availability: true,
+    cost_per_day: 100,
     shop: Shop.find_by(name: "Atelier R.de Fèbres")
     )
    watch_31.photo.attach(
@@ -610,6 +643,7 @@ CHRONOGRAPHE OMEGA CO‑AXIAL 41,5 MM",
     price: 33600,
     description: "La GMT-Master II arbore une aiguille supplémentaire faisant le tour du cadran en 24 heures, en complément des traditionnelles aiguilles des heures, minutes et secondes, ainsi qu’une lunette tournante bidirectionnelle graduée 24 heures.",
     availability: true,
+    cost_per_day: 100,
     shop: Shop.find_by(name: "Euro Art et Collection")
     )
    watch_32.photo.attach(
@@ -624,6 +658,7 @@ CHRONOGRAPHE OMEGA CO‑AXIAL 41,5 MM",
     price: 16350,
     description: "Traditionnelle par sa forme ronde et son diamètre classique de 39 mm, la Cellini Date se distingue par ses cornes raffinées, sa finition entièrement polie et sa lunette bombée doublée d’un fin cannelé.",
     availability: true,
+    cost_per_day: 100,
     shop: Shop.find_by(name: "Euro Art et Collection")
     )
    watch_33.photo.attach(
@@ -638,6 +673,7 @@ CHRONOGRAPHE OMEGA CO‑AXIAL 41,5 MM",
     price: 33800,
     description: "La lunette tournante de la Submariner est une des fonctions clés de la montre. Ses graduations 60 minutes permettent au plongeur de mesurer avec précision son temps de plongée et d’adapter ses paliers de décompression.",
     availability: true,
+    cost_per_day: 100,
     shop: Shop.find_by(name: "Charlie Watch - Paris")
     )
    watch_34.photo.attach(
@@ -652,6 +688,7 @@ CHRONOGRAPHE OMEGA CO‑AXIAL 41,5 MM",
     price: 10400,
     description: "La lunette tournante unidirectionnelle graduée 60 minutes de la nouvelle Sea‑Dweller permet de lire les temps de plongée et de décompression avec précision et en toute sécurité.",
     availability: true,
+    cost_per_day: 100,
     shop: Shop.find_by(name: "Atelier R.de Fèbres")
     )
    watch_35.photo.attach(
@@ -705,27 +742,31 @@ booking_items_attributes =[
     status: 'pending',
     start_date: '23 Decembre 2019',
     end_date: '26 Decembre 2019',
+    cost: 300,
   },
   {
     booking: Booking.find_by(user: User.find_by(name: 'Etienne')),
     watch: watch_2.reload,
     status: 'pending',
     start_date: '13 Decembre 2019',
-    end_date: '16 Decembre 2019'
+    end_date: '16 Decembre 2019',
+    cost: 300,
   },
   {
     booking: Booking.find_by(user: User.find_by(name: 'Anniou')),
     watch: watch_3.reload,
     status: 'pending',
     start_date: '30 Decembre 2019',
-    end_date: '5 Janvier 2020'
+    end_date: '5 Janvier 2020',
+    cost: 600,
   },
   {
     booking: Booking.find_by(user: User.find_by(name: 'Cedrik')),
     watch: watch_4.reload,
     status: 'confirmed',
     start_date: '3 Janvier 2020',
-    end_date: '6 Janvier 2020'
+    end_date: '6 Janvier 2020',
+    cost: 300,
   }
 ]
 
