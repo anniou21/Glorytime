@@ -8,6 +8,7 @@ class WatchesController < ApplicationController
    end
 
   def show
-    # @watch = Watch.find(params[:id])
+    @watch = Watch.find(params[:id])
+    @booking_item = BookingItem.new(watch: @watch
   end
 end

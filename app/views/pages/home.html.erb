@@ -1,11 +1,10 @@
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= image_path "banner-home.jpg", height: 200, width: 1080 %>')">
   <div class="container">
     <h1>Et vous, quelle montre allez-vous louer ?</h1>
+
+    <%= link_to 'Voir les montres', watches_path, class:'btn btn-flat' %>
+
     <div id="container">
-      <div id="searchbar">
-        <input type="text" id="topics" style="float:left"/><input type="hidden" id="topicID" placeholder="Rolex, IWC, Submariner ..." />
-        <div id="btn" onclick="checkWeb()" style="float:left"><%= link_to "Les montres", "#", class: "btn btn-flat" %></div>
-      </div>
     </div>
   </div>
 </div>
@@ -23,19 +22,19 @@
             <div class="col-12 col-sm-8 col-md-4 col-lg-3 m-sm-auto mr-md-auto ml-md-0">
               <%= image_tag "home-images/searching.svg", width: 230 %>
               <h3><strong>1 - Rechercher votre montre</strong></h3>
-              <p>Parmis un large gamme de montres de luxe à disposition, faites votre choix avec des marques connues comme IWC, Tag Huer, Rolex ...</p>
+              <p>Parmi une large gamme de montres de luxe à disposition, choisissez parmi des marques connues comme IWC, Tag Huer, Rolex ...</p>
             </div>
 
             <div class="col-12 col-sm-8 col-md-4 col-lg-3 m-sm-auto pt-5 pt-md-0">
               <%= image_tag "home-images/rent.svg", width: 230 %>
               <h3><strong>2 - Louer votre montre</strong></h3>
-              <p> La location de montres de luxe n'a jamais été aussi simple avec Gold watch! Ne pas oublier le dépôt de garantie prévu pour sécuriser la location.</p>
+              <p> La location de montres de luxe n'a jamais été aussi simple avec Gold watch ! Ne pas oublier le dépôt de garantie prévu pour sécuriser la location.</p>
             </div>
 
             <div class="col-12 col-sm-8 col-md-4 col-lg-3 m-sm-auto ml-md-auto mr-md-0 pt-5 pt-md-0">
               <%= image_tag "home-images/horloger.svg", width: 230 %>
-              <h3><strong>3 - Récuperer chez l'horloger</strong></h3>
-              <p>Notre réseaux d'horloger répartit dans tout Paris, va vous permettre d'aller récupérer votre montre chez un spécialiste.</p>
+              <h3><strong>3 - Récupérer chez l'horloger</strong></h3>
+              <p>Notre réseaux d'horlogers répartis dans tout Paris, va vous permettre d'aller récupérer votre montre chez un spécialiste.</p>
             </div>
           </div>
         </div>
@@ -44,9 +43,30 @@
 <div class="banner-features" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= image_path "banner-features.jpg", height: 500, width: 1080 %>')">
   <div class="container">
     <h1>Pour une occasion, démarquez-vous</h1>
-    <p>Louer nos montres de luxe avec le réseau d'horloger</p>
+    <p>Louez nos montres de luxe avec le réseau d'horlogers</p>
   </div>
 </div>
+
+<section class="companies">
+  <div class="container">
+    <div class="row text-center">
+      <div class="col-12">
+        <h3><strong>Ils nous font confiance</strong></h3>
+
+        <div class="mt-5 justify-content-center">
+          <%= image_tag 'companies/iwc.svg', width:'100', class:'m-3' %>
+          <%= image_tag 'companies/audemars-piguet.svg', width:'100', class:'m-3'  %>
+          <%= image_tag 'companies/omega.svg', width:'100', class:'m-3'  %>
+        </div>
+        <div class="md-5 justify-content-center">
+          <%= image_tag 'companies/rolex.svg', width:'100', class:'m-3'  %>
+          <%= image_tag 'companies/tag-heuer.svg', width:'100', class:'m-3'  %>
+          <%= image_tag 'companies/tissot.svg', width:'100', class:'m-3' %>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 
 

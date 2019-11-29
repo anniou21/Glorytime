@@ -1,0 +1,15 @@
+<H1>Panier</H1>
+
+<% @bookings.each do |booking| %>
+<%= booking.user.name %>
+<%= booking.status %>
+
+
+
+<!--     t.bigint "booking_id"
+    t.bigint "watch_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.date "end_date"
+    t.date "start_date"
+    t.string "status" -->

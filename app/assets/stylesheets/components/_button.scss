@@ -32,3 +32,28 @@
   text-decoration: none;
   color: #4A4A4A;
 }
+
+
+
+.btn-rsx {
+  color: white;
+  border: 1px solid #e0ddd9;
+  padding: 8px 24px;
+  border-radius: 5px;
+  font-weight: lighter;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
+.btn-rsx a {
+  text-decoration: none;
+  color: white;
+}
+
+.btn-rsx:hover {
+  opacity: 1;
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+
