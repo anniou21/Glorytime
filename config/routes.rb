@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   resources :bookings, only: [:index, :show] do
     resources :booking_items, only: [:create]
   end
-
+  get 'basket', to:'bookings#basket', as: :basket
   resources :booking_items, only: [:destroy]
 
   resource :dashboard, only: [:show]
