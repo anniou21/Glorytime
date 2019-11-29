@@ -1,11 +1,8 @@
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= image_path "banner-home.jpg", height: 200, width: 1080 %>')">
   <div class="container">
     <h1>Et vous, quelle montre allez-vous louer ?</h1>
+    <%= link_to 'Voir les montres', watches_path, class:'btn btn-flat' %>
     <div id="container">
-      <div id="searchbar">
-        <input type="text" id="topics" style="float:left"/><input type="hidden" id="topicID" placeholder="Rolex, IWC, Submariner ..." />
-        <div id="btn" onclick="checkWeb()" style="float:left"><%= link_to "Les montres", "#", class: "btn btn-flat" %></div>
-      </div>
     </div>
   </div>
 </div>

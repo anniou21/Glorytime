@@ -49,7 +49,7 @@
               <span id="product-short"><small>PORTUGIESER CHRONOGRAPHE</small></span>
             <div class="container-fluid">
                           <div class="row">
-                            <span id="old-price" class="text-danger"></span><h5 id="price">500.00€</h5>
+                            <span id="old-price" class="text-danger"></span><h5 id="price">100 €/jours</h5>
                           </div>
             </div>
              <div id="product-variables">
@@ -61,6 +61,7 @@ Fabriqué à Schaffhausen, en Suisse. </p>
 
                  </div>
              </div>
+
 <div id="add-to-cart">
             <%= simple_form_for([@booking, @booking_item]) do |f| %>
               <%= f.input :watch_id, as: :hidden %>
@@ -70,17 +71,26 @@ Fabriqué à Schaffhausen, en Suisse. </p>
                 <%= f.input :end_date, as: :string, label: false %>
                 </div>
               </div>
-              <%= f.submit 'LOUER', class: "btn btn-flat" %>
+              <%= f.submit 'Ajouter', class: "btn btn-flat" %>
             <% end %>
           </div>
         </div>
+
           </div>
       </div>
   </div> <!-- end card -->
 </div>
 
-<div class="container">
 
+<div class="container">
+  <div class="container-watch text-center">
+        <h2 style="color:white">Voulez-vous faire partie de notre réseau ?</h2>
+        <p style="color:white">Prêt de 150 Horlogers nous font confiances pour louer leurs montres de luxes</p>
+        <button class="btn btn-rsx">En savoir plus </button>
+  </div>
+</div>
+<div class="container">
+    <h1 class="text-center pt-5">Votre magasin :</h1>
   <div class="card">
   <div class="card-body row ">
           <div class="col-sm-12 col-md-6" id="image-container">
@@ -94,7 +104,7 @@ Fabriqué à Schaffhausen, en Suisse. </p>
               </div>
           </div>
           <div class="col-sm-12 col-md-6" id="product-information">
-             <h2 class="p-0 m-0" id="product-title"><%=  %></h2>
+             <h2 class="p-0 m-0" id="product-title">Champs d'Or</h2>
               <span id="product-short"><small>
 Boutique de Montres et bijoux de luxe : Horlogerie, Joaillerie</small></span>
             <div class="container-fluid">
@@ -112,7 +122,11 @@ Boutique de Montres et bijoux de luxe : Horlogerie, Joaillerie</small></span>
              </div>
 
                <div id="add-to-cart" class="">
+
                    <button class="btn btn-flat"> En savoir plus</button>
+
+               </div>
+
 
               </div>
     </div>

@@ -1,13 +1,32 @@
-<H1>Détails d'une réservation</H1>
-<br>
-Montre : <% @booking_item.each do |id| %>
-<%  if BookingItem.find(id).watch %>
-<%=  BookingItem.find(id).watch.model %>
-<% end %>
-<% end %><br>
 
-
-Statut: <%= @booking.status %><br>
-Date: <%= @booking.created_at %><br>
-Total: <%= @booking.price_total %><br>
+<div class="container-booking">
+  <H1>Détails de la location</H1>
+  <br/>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Montre</th>
+          <th scope="col">Modèle</th>
+          <th scope="col">Date</th>
+          <th scope="col">Prix</th>
+          <th scope="col">Statut</th>
+        </tr>
+      </thead>
+      <tbody>
+            <% @booking_item.each do |id| %>
+            <%  if BookingItem.find(id).watch %>
+        <tr>
+          <th scope="row">1</th>
+          <td><%=  BookingItem.find(id).watch.brand %></td>
+          <td><%=  BookingItem.find(id).watch.model %></td>
+          <td><%= @booking.created_at %></td>
+          <td><%= @booking.price_total %> €</td>
+          <td>✅<%= @booking.status %></td>
+        </tr>
+            <% end %>
+            <% end %>
+      </tbody>
+    </table>
+</div>
 
