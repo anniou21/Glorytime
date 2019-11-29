@@ -36,7 +36,7 @@
               <p class="card-text2 text-center"><%= watch.model %><br/></p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                  <button type="button" class="btn btn-ghost"><%= link_to 'Voir', watch_path(@watches) %></button>
+                  <button type="button" class="btn btn-ghost"><%= link_to 'Voir', watch_path(watch) %></button>
                 </div>
                 <small class="text-muted"><%= watch.price * 1000 %>€</small>
               </div>
