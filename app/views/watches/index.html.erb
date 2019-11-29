@@ -5,8 +5,8 @@
                     <input type="text" class="form-control" placeholder="ex: Rolex">
                   </div>
                   <div class="col">
-                    <input type="text" class="form-control" placeholder="Marque">
-                  </div>
+                    <input type="text" class="form-control" class="input-group-text" placeholder="Marque">
+                    </div>
                   <div class="col">
                     <input type="text" class="form-control" placeholder="Model">
                   </div>
@@ -22,11 +22,13 @@
               </form>
 </div>
 
-<div class="grid m-5">
-  <% @watches.each do |watch| %>
   <div class="container">
-    <div class="row">
-      <div class="col-md-4">
+
+    <div class="cards">
+
+      <% @watches.each do |watch| %>
+
+
           <div class="card d-flex justify-content-around align-items-center">
             <img src="https://www.iwc.com/content/dam/rcq/iwc/19/41/90/4/1941904.png.transform.global_image_png_320_2x.png" alt="" width="210" >
             <div class="card-body text-center">
@@ -36,13 +38,16 @@
                 <div class="btn-group">
                   <button type="button" class="btn btn-ghost"><%= link_to 'Voir', watch_path(@watches) %></button>
                 </div>
-                <small class="text-muted"><%= watch.price * 1000 %> €€</small>
+                <small class="text-muted"><%= watch.price * 1000 %>€</small>
               </div>
             </div>
           </div>
-        </div>
-        <% end %>
+      <% end %>
+
     </div>
+
   </div>
 </div>
+
+
 
