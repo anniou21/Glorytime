@@ -35,6 +35,19 @@ label[for=subscribe-btn]{
   margin:40px auto
 }
 
+// EFFET HOVER
+.card:hover {
+  box-shadow: 2px 4px 10px 4px #afafaf;
+  text-decoration: none;
+}
+
+.cards a{
+  text-decoration: none;
+}
+
+// FIN EFFET HOVER
+
+
 .card > #image-container{
   position:relative;
 }
