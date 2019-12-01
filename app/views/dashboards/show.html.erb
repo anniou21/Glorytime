@@ -1,6 +1,6 @@
 <div class="container container-dashboard">
   <div class="row profile" display="flex">
-    <div class="col-md-3">
+    <div class="col-md-3 mt-0">
       <div class="profile-sidebar">
             <!-- SIDEBAR USERPIC -->
 
@@ -34,8 +34,6 @@
         </div>
       </div>
     </div>
-
-
 
     <div class="col-md-9">
       <div class="profile-content">
@@ -77,7 +75,7 @@
                   <div id="accordion">
                     <% key = "collapse#{b.id}" %>
                     <button class="btn btn-link" data-toggle="collapse" data-target='#<%= key %>' aria-expanded="true" aria-controls='<%= key %>'>
-                      <%= b.booking_items.count %>  >>> View details
+                      <%= b.booking_items.count %>
 
                     </button>
                         <div id='<%= key %>' class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
@@ -94,16 +92,70 @@
                 <% end %>
             </tbody>
           </table>
-
-
-
-
-
+        </div>
+        <div class="container mt-5">
+          <h1>Commentaires</h1>
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">
+                  <div class="media text-muted pt-3">
+                      <%= image_tag "https://avatars2.githubusercontent.com/u/54837955?v=4", class: "avatar-bordered mr-3", alt: "avatar-bordered" %>
+                      <p class="media-body pb-3 mb-0 small lh-125">
+                        <strong class="d-block text-gray-dark">@Muriel | Champs d'Or</strong>
+                        <%= current_user.name %> est un bon client ! Il est revenu deux fois pour louer la même montre IWC
+                      </p>
+                    </div>
+                </th>
+                <th scope="col">
+                  <div class="media text-muted pt-3">
+                      <%= image_tag "https://res.cloudinary.com/anniou/image/upload/v1575040494/NTmAjBZhKjdHvRw2iZ2cyfkz.jpg", class: "avatar-bordered mr-3", alt: "avatar-bordered" %>
+                      <p class="media-body pb-3 mb-0 small lh-125">
+                        <strong class="d-block text-gray-dark">@Bernard | Horloger Paris Premium</strong>
+                        <%= current_user.name %> a rendu la montre sans aucune égratinure ! Un client sérieux .
+                      </p>
+                    </div>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+          <div class="container mt-5">
+          <h1>Whishlist</h1>
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">
+                  <div class="media text-muted pt-3">
+                      <%= image_tag "https://res.cloudinary.com/anniou/image/upload/v1575040522/3MT94ypFYomCqRy4rwuVqfoW.png", class: "avatar-bordered mr-3", alt: "avatar-bordered" %>
+                      <p class="media-body pb-3 mb-0 small lh-125">
+                        <strong class="d-block text-gray-dark">BRAND| MODEL</strong>
+                        Description de la montre ...
+                      </p>
+                    </div>
+                </th>
+                <th scope="col">
+                  <div class="media text-muted pt-3">
+                      <%= image_tag "https://res.cloudinary.com/anniou/image/upload/v1575040519/hepWZbgYnPyELhWu5WrBE7ec.png", class: "avatar-bordered mr-3", alt: "avatar-bordered" %>
+                      <p class="media-body pb-3 mb-0 small lh-125">
+                        <strong class="d-block text-gray-dark">BRAND| MODEL</strong>
+                        Description de la montre ...
+                      </p>
+                    </div>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </div>
-
-
-
   </div>
 </div>
