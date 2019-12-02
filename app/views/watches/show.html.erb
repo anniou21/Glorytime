@@ -1,14 +1,13 @@
 <div class="searchbar-div">
-           <%= form_tag watches_path, class:"form-inline my-2 my-lg-0", id:"search_field", method: :get do %>
+  <%= form_tag watches_path,class:"form-inline my-2 my-lg-0", id:"search_field", method: :get do %>
+      <%= text_field_tag :query,
+      params[:query], style:'width:1080px',
+      class: "form-control",
+      type: "search",
+      placeholder: "ex: Rolex Submariner ..." %>
 
-                    <%= text_field_tag :query,
-                    params[:query],
-                    class: "form-control",
-                    type: "search",
-                    placeholder: "ex: Rolex" %>
-
-                <%= submit_tag "Search", class: "btn btn-warning" %>
-                <% end %>
+    <%= submit_tag "Search", class: "btn btn-flat" %>
+  <% end %>
 </div>
 
 <div class="container">
@@ -16,35 +15,21 @@
       <div class="card-body row ">
           <div class="col-sm-12 col-md-6" id="image-container">
                 <div id="main-img">
-                    <main class="primary" style="background-image:url(https://www.iwc.com/content/dam/rcq/iwc/19/41/90/4/1941904.png.transform.global_image_png_320_2x.png" class="mx-auto"></main>
+                     <%= cl_image_tag @watch.photo.key, height: 500, width: 400, crop: :fill %>
               </div>
-              <div class="container-fluid">
-                  <div class="row mx-auto" id="thumbnail-container">
-                       <a href="#" class="thumbnail selected" data-big="https://source.unsplash.com/200x300/?icecream">
-                           <div class="thumb" style="background-image:url(https://source.unsplash.com/200x300/?watch); background-size:cover;">
-                           </div>
-                       </a>
-                      <a href="#" class="thumbnail" data-big="https://source.unsplash.com/200x300/?sundae">
-                           <div class="thumb" style="background-image:url(https://source.unsplash.com/200x300/?watch); background-size:cover;">
-                           </div>
-                       </a>
 
-                  </div>
-              </div>
               <span id="favorite-button" onclick="favoriteAdd()" class="btn"><i class="fa fa-heart"></i></span>
           </div>
           <div class="col-sm-12 col-md-6" id="product-information">
-             <h2 class="p-0 m-0" id="product-title">IWC</h2>
-              <span id="product-short"><small>PORTUGIESER CHRONOGRAPHE</small></span>
+             <h2 class="p-0 m-0" id="product-title"><%= @watch.brand %></h2>
+              <span id="product-short"><small><%= @watch.model %></small></span>
             <div class="container-fluid">
                           <div class="row">
-                            <span id="old-price" class="text-danger"></span><h5 id="price">100 €/jours</h5>
+                            <span id="old-price" class="text-danger"></span><h5 id="price"><%= @watch.cost_per_day %> €/jours</h5>
                           </div>
             </div>
              <div id="product-variables">
-                 <p>Description: Boîtier en Acier fin , Remontage automatique, Diamètre 40.9 mm.
-
-Fabriqué à Schaffhausen, en Suisse. </p>
+                 <p><%= @watch.description %></p>
 
                  <div id="text">
 
@@ -60,7 +45,7 @@ Fabriqué à Schaffhausen, en Suisse. </p>
                 <%= f.input :end_date, as: :string, label: false %>
                 </div>
               </div>
-              <%= f.submit 'Ajouter', class: "btn btn-flat" %>
+              <%= f.submit 'Ajouter au panier', class: "btn btn-flat" %>
             <% end %>
           </div>
         </div>
