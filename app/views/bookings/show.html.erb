@@ -1,32 +1,35 @@
 
 <div class="container-booking">
-  <H1>Détails de la location</H1>
+  <div class="d-flex justify-content-between">
+    <h1>Détails de la location</h1>
+    <h2><%= @booking.price.to_i %>€</h2>
+  </div>
   <br/>
-    <table class="table">
-      <thead>
-        <tr>
-          <th scope="col">#</th>
-          <th scope="col">Montre</th>
-          <th scope="col">Modèle</th>
-          <th scope="col">Date</th>
-          <th scope="col">Prix</th>
-          <th scope="col">Statut</th>
-        </tr>
-      </thead>
-      <tbody>
-            <% @booking_item.each do |id| %>
-            <%  if BookingItem.find(id).watch %>
-        <tr>
-          <th scope="row">1</th>
-          <td><%=  BookingItem.find(id).watch.brand %></td>
-          <td><%=  BookingItem.find(id).watch.model %></td>
-          <td><%= @booking.created_at %></td>
-          <td><%= @booking.price_total %> €</td>
-          <td>✅<%= @booking.status %></td>
-        </tr>
-            <% end %>
-            <% end %>
-      </tbody>
-    </table>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Montre</th>
+        <th scope="col">Modèle</th>
+        <th scope="col">Date</th>
+        <th scope="col">Prix</th>
+        <th scope="col">Statut</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @booking_items.each_with_index do |item, index| %>
+        <%  if item.watch %>
+          <tr>
+            <th scope="row"><%= index + 1 %></th>
+            <td><%=  item.watch.brand %></td>
+            <td><%=  item.watch.model %></td>
+            <td><%=  item.created_at %></td>
+            <td><%=  item.cost.to_i %> €</td>
+            <td>✅<%= @booking.status %></td>
+          </tr>
+        <% end %>
+      <% end %>
+    </tbody>
+  </table>
 </div>
 

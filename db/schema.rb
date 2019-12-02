@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_02_133500) do
+ActiveRecord::Schema.define(version: 2019_12_02_144445) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -44,6 +44,7 @@ ActiveRecord::Schema.define(version: 2019_12_02_133500) do
     t.date "end_date"
     t.date "start_date"
     t.string "status"
+    t.integer "cost_cents", default: 0, null: false
     t.index ["booking_id"], name: "index_booking_items_on_booking_id"
     t.index ["watch_id"], name: "index_booking_items_on_watch_id"
   end
@@ -101,6 +102,8 @@ ActiveRecord::Schema.define(version: 2019_12_02_133500) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "sku"
+    t.integer "price_cents", default: 0, null: false
+    t.integer "cost_per_day_cents", default: 0, null: false
     t.index ["shop_id"], name: "index_watches_on_shop_id"
   end
 

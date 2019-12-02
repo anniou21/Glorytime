@@ -1,0 +1,33 @@
+remove
+
+rails g migration RemovePriceCentsCentsFromWatches
+rails g migration RemoveCostPerDayCentsCentsFromWatches
+rails g migration RemoveCostCentsCentsFromBookingItems
+
+
+
+Add
+
+rails g migration AddPriceCentsFromWatches
+
+class AddPriceCentsToWatches < ActiveRecord::Migration[5.2]
+  def change
+    add_monetize :watches, :price, currency: { present: false }
+  end
+end
+
+rails g migration AddCostPerDayCentsFromWatches
+
+class AddCostPerDayCentsToWatches < ActiveRecord::Migration[5.2]
+  def change
+    add_monetize :watches, :cost_per_day, currency: { present: false }
+  end
+end
+
+rails g migration AddCostCentsFromBookingItems
+
+class AddCostCentsToBookingItems < ActiveRecord::Migration[5.2]
+  def change
+    add_monetize :booking_items, :cost, currency: { present: false }
+  end
+end
