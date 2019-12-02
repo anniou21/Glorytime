@@ -19,7 +19,7 @@ Rails.application.routes.draw do
   resources :watches do
     resources :bookmarks, only: [:index, :new, :create]
   end
-  resource :bookmark, only: [:destroy]
+  resources :bookmarks, only: [:destroy]
   # get '/dashboard', to: 'dashboards#show'
 
   # FLOW OWNER (si on a le temps)
