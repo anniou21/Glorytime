@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_02_092733) do
+ActiveRecord::Schema.define(version: 2019_12_02_133500) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -44,7 +44,6 @@ ActiveRecord::Schema.define(version: 2019_12_02_092733) do
     t.date "end_date"
     t.date "start_date"
     t.string "status"
-    t.integer "cost"
     t.index ["booking_id"], name: "index_booking_items_on_booking_id"
     t.index ["watch_id"], name: "index_booking_items_on_watch_id"
   end
@@ -52,9 +51,9 @@ ActiveRecord::Schema.define(version: 2019_12_02_092733) do
   create_table "bookings", force: :cascade do |t|
     t.string "status"
     t.bigint "user_id"
-    t.integer "price_total"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "price_cents", default: 0, null: false
     t.index ["user_id"], name: "index_bookings_on_user_id"
   end
 
@@ -96,13 +95,11 @@ ActiveRecord::Schema.define(version: 2019_12_02_092733) do
   create_table "watches", force: :cascade do |t|
     t.string "brand"
     t.string "model"
-    t.integer "price"
     t.string "description"
     t.boolean "availability"
     t.bigint "shop_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "cost_per_day"
     t.string "sku"
     t.index ["shop_id"], name: "index_watches_on_shop_id"
   end

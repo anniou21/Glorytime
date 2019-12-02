@@ -8,6 +8,7 @@ class BookingItem < ApplicationRecord
   private
 
   def compute_cost
+    # change self.cost to self.price
     price = watch.cost_per_day
     self.cost = (end_date - start_date).to_i * price
     save

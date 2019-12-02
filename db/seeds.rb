@@ -581,7 +581,7 @@ CHRONOGRAPHE OMEGA CO‑AXIAL 41,5 MM",
     price: 7500,
     description: "La collection Speedmaster 38 mm se caractérise par sa simplicité, sa taille unique et ses multiples coloris, tout en restant fidèle à l’esthétique et au patrimoine du plus célèbre des chronographes OMEGA.",
     availability: true,
-    cost_per_day: 100,
+    cost_per_day_cents: 10000,
     sku: "SPEEDMASTER 38 CHRONOGRAPHE CO‑AXIAL 38 MM",
     shop: Shop.find_by(name: "Euro Art et Collection")
     )
