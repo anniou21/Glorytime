@@ -14,12 +14,12 @@
   <div class="cards">
     <% @watches.each do |watch| %>
     <%= link_to watch_path(watch) do %>
-      <div class="card d-flex justify-content-around align-items-center">
+      <div class="card d-flex justify-content-around align-items-center pt-3">
         <%= cl_image_tag watch.photo.key, height: 200, width: 210, crop: :fill %>
         <div class="card-body text-center">
           <p class="card-text1 text-center"><%= watch.brand %></p>
           <p class="card-text2 text-center"><%= watch.model.truncate_words(2) %><br/></p>
-            <small class="text-muted text-center"><%= watch.price %> €</small>
+            <small class="card-text3 text-muted text-center"><%= watch.price %> € | Prix de vente</small>
         </div>
       </div>
       <% end %>

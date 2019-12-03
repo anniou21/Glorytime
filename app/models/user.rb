@@ -6,4 +6,12 @@ class User < ApplicationRecord
   has_many :bookings
   has_many :orders
   has_one_attached :photo
+  has_many :bookmarks
+
+  def get_items
+    self.bookings.find_by(status: 'pending').booking_items.count
+  end
+
+ 
+
 end
