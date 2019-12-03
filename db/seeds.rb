@@ -163,9 +163,6 @@ puts 'Creating Watches...'
     description: " À l’occasion du 50e anniversaire de la TAG Heuer Monaco, la Maison lance une édition limitée à seulement 169 exemplaires aux côtés de quatre autres montres exclusives.",
     availability: true,
     sku: "TAG-HEUER-MC-11",
-    price_cents: 595000,
-    description: " À l’occasion du 50e anniversaire de la TAG Heuer Monaco, la Maison lance une édition limitée à seulement 169 exemplaires aux côtés de quatre autres montres exclusives.",
-    availability: true,
     cost_per_day_cents: 15000,
     shop: Shop.find_by(name: "Champs d'Or")
   )
@@ -182,9 +179,6 @@ puts 'Creating Watches...'
     description: "L’Ingenieur Chronographe est animé par le calibre de manufacture IWC 69375 avec remontage bidirectionnel à cliquets et réserve de marche de 46 heures.",
     availability: true,
     sku: "IWC-IC",
-    price_cents: 860000,
-    description: "L’Ingenieur Chronographe est animé par le calibre de manufacture IWC 69375 avec remontage bidirectionnel à cliquets et réserve de marche de 46 heures.",
-    availability: true,
     cost_per_day_cents: 15000,
     shop: Shop.find_by(name: "Champs d'Or")
   )
@@ -201,9 +195,6 @@ puts 'Creating Watches...'
     description: "Depuis 1998, la Portugieser Chronographe est le modèle le plus convoité de la famille Portugieser. Elle était alors la première Portugieser permettant non seulement de lire le passage du temps, mais aussi de le chronométrer.",
     availability: true,
     sku: "IWC-PC",
-    price_cents: 745000,
-    description: "Depuis 1998, la Portugieser Chronographe est le modèle le plus convoité de la famille Portugieser. Elle était alors la première Portugieser permettant non seulement de lire le passage du temps, mais aussi de le chronométrer.",
-    availability: true,
     cost_per_day_cents: 15000,
     shop: Shop.find_by(name: "Champs d'Or")
   )
@@ -238,9 +229,6 @@ CHRONOGRAPHE OMEGA CO‑AXIAL 41,5 MM",
     description: "Cette montre rompait avec les codes traditionnels de l'horlogerie en étant le premier chronographe spécialement conçu pour les pilotes professionnels, tout en étant parfaitement adapté à la conduite sportive occasionnelle ou à un usage quotidien classique",
     availability: true,
     sku: "TAG-HEUER-CC-H02T",
-    price_cents: 1525000,
-    description: "Cette montre rompait avec les codes traditionnels de l'horlogerie en étant le premier chronographe spécialement conçu pour les pilotes professionnels, tout en étant parfaitement adapté à la conduite sportive occasionnelle ou à un usage quotidien classique",
-    availability: true,
     cost_per_day_cents: 35000,
     shop: Shop.find_by(name: "Champs d'or")
     )
@@ -305,8 +293,6 @@ CHRONOGRAPHE OMEGA CO‑AXIAL 41,5 MM",
     description: "EN ROUTE ! Vitesse. Sueur. Puissance. Jack Heuer a créé la Carrera en 1963 en hommage à la célèbre Carrera Panamericana, une course automobile largement considérée comme étant la plus dangereuse au monde.",
     availability: true,
     sku: "TAG-HEUER-CC-H01",
-    price_cents: 570000,
-    availability: true,
     cost_per_day_cents: 20000,
     shop: Shop.find_by(name: "Euro Art et Collection")
     )
@@ -323,7 +309,6 @@ CHRONOGRAPHE OMEGA CO‑AXIAL 41,5 MM",
     description: "SOYEZ UNE ICÔNE. Tout comme la ville éponyme et la course automobile qu'elle accueille, la Monaco est la quintessence de l'élégance et du prestige avec une touche de vintage.",
     availability: true,
     sku: "TAG-HEUER-MC-11",
-    availability: true,
     cost_per_day_cents: 20000,
     shop: Shop.find_by(name: "Atelier R.de Fèbres")
     )
@@ -356,7 +341,6 @@ CHRONOGRAPHE OMEGA CO‑AXIAL 41,5 MM",
     availability: true,
     sku: "DA-VINCI-A36",
     price_cents: 555000,
-    availability: true,
     cost_per_day_cents: 20000,
     shop: Shop.find_by(name: "Euro Art et Collection")
     )

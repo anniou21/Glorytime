@@ -1,4 +1,5 @@
 class BookingItem < ApplicationRecord
+  include CloudinaryHelper
   belongs_to :booking
   belongs_to :watch
   has_many :reviews, dependent: :destroy
@@ -9,7 +10,7 @@ class BookingItem < ApplicationRecord
   def stripe_line_item
     {
       name: watch.sku,
-      images: [Rails.application.routes.url_helpers.rails_blob_path(watch.photo, only_path: true)],
+      images: [cloudinary_url(watch.photo.key)],
       amount: cost_cents,
       currency: 'eur',
       quantity: 1
