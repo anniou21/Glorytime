@@ -24,7 +24,9 @@
 
             <div class="profile-userbuttons">
                 <p><%= current_user.name %></p>
+
               <%= link_to 'Les montres', watches_path, class:"btn btn-flat m-2" %>
+
 
             </div>
                  <div class="portlet light bordered">
@@ -45,60 +47,104 @@
       <div class="profile-content">
         <div class="container mt-5">
           <h1>Mes commandes</h1>
-
-              <select id="status-filter-btn">
-                <option value="#">select a status:</option>
-                <option value="pending">pending ⚫️</option>
-                <option value="confirmed">paid 🔵</option>
-              </select>
+              <%= form_tag dashboard_path, method: :get do %>
+                <%= select_tag :status, options_for_select(['pending', 'paid']),
+                  class: "form-control"
+                %>
+                <%= submit_tag "Search", class: "btn btn-dark" %>
+              <% end %>
           <table class="table">
             <thead>
               <tr>
                 <th scope="col">Statut</th>
-                <th scope="col">Price</th>
+                <th scope="col">Prix</th>
                 <th scope="col">Début</th>
                 <th scope="col">Fin</th>
-                <th scope="col">Quantité</th>
+                <th scope="col">Produit</th>
+                <th scope="col">Détails</th>
               </tr>
             </thead>
             <tbody>
-                <% @bookings.each_with_index do |b, index| %>
-              <tr class="<%= b.status %>">
+              <% @bookings.each_with_index do |b, index| %>
+                <tr class="<%= b.status %>">
+                <% if b.booking_items.count != 0 %>
+
+                  <td>
+                    <% if b.status == 'pending' %>
+                      <%= "🔴" %>
+                    <% else %>
+                      <%= "🔵" %>
+                    <% end %>
+                  </td>
+
+                <% unless b.booking_items.empty? %>
+                  <td><%= b.price_total%>€ </td>
+                <% end %>
+
+
+                <% if b.booking_items.first.start_date != nil %>
+                  <td><%= b.booking_items.first.start_date.strftime("%d/%m/%Y") %></td>
+                  <td><%= b.booking_items.first.end_date.strftime("%d/%m/%Y") %></td>
+                <% else %>
+                  <td></td>
+                  <td></td>
+                <% end %>
 
                 <td>
-                  <% if b.status == 'pending' %>
-                    <%= "⚫️" %>
-                  <% else %>
-                    <%= "🔵" %>
-                  <% end %>
+                  <%= b.booking_items.count  %>
                 </td>
-                <td><%= b.price_total%>€ </td>
-                <td><%= b.booking_items.first.start_date.strftime("%d/%m/%Y") %></td>
-                <td><%= b.booking_items.first.end_date.strftime("%d/%m/%Y") %></td>
-
 
                 <td>
-                  <div id="accordion">
-                    <% key = "collapse#{b.id}" %>
-                    <button class="btn btn-link" data-toggle="collapse" data-target='#<%= key %>' aria-expanded="true" aria-controls='<%= key %>'>
-                      <%= b.booking_items.count %>
+                  <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#modal-<%= b.id %>">
+                    Voir détails
+                  </button>
+                </td>
+              <!-- Modal -->
+                <td>
+                  <div class="modal fade" id="modal-<%= b.id %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel"></h5>
+                          <div class="modal-body">
+                              <% key = "collapse#{b.id}" %>
 
-                    </button>
-                        <div id='<%= key %>' class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
-                          <div class="card-body">
-                            <%= b.watches.count %>
-                            <% b.watches.each do |watch| %>
-                            <%= watch.brand %>
-                            <% end %>
+                              <div  id='<%= key %>' >
+                                <div class="card-body">
+
+                                  <% b.watches.each do |watch| %>
+                                  <li>
+                                    <strong><%= watch.brand %></strong>
+                                  </li>
+                                  <%= watch.model %>
+                                  <% end %>
+
+                                </div>
+                                <br>
+
+                                <% if b.status == 'pending' %>
+                                  <%= link_to'Voir panier', booking_path(@booking), class:"btn basket btn-dark btn-sm m-2" %>
+                                <% end %>
+                              </div>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
                           </div>
                         </div>
+                      </div>
+                    </div>
                   </div>
                 </td>
+          <!-- Fin Modal -->
+                <% end %>
+              </div>
               </tr>
                 <% end %>
             </tbody>
           </table>
         </div>
+
+
         <div class="container mt-5">
           <h1>Commentaires</h1>
           <table class="table">
