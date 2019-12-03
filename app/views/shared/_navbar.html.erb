@@ -16,18 +16,11 @@
           <li class="nav-item">
             <%= link_to "Montres", watches_path, class: "nav-link" %>
           </li>
-          <li class="nav-item">
+          <li class="nav-item position-relative">
             <%= link_to '|<i class="fas fa-shopping-basket"></i>| '.html_safe,  booking_path(@booking), class: "nav-link" %>
-            <!-- <div class="dropdown">
-              <button class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <i class="fas fa-shopping-basket"></i>
-              </button>
-              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <% current_user.get_bookings.each do |booking| %>
-                  <%= link_to booking.model, booking_path(@booking), class: 'dropdown-item' %>
-                <% end %>
-              </div>
-            </div> -->
+            <div class="numbasket">
+              <%= current_user.get_items %>
+            </div>
           </li>
 
         </ul>
@@ -54,8 +47,3 @@
   </div>
 </div>
 
-<% if user_signed_in? %>
-  <div class="numbasket">
-    <%= current_user.get_items %>
-  </div>
-<% end %>

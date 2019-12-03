@@ -19,13 +19,10 @@ Rails.application.routes.draw do
     resources :payments, only: :new
   end
 
-
-  resources :watches do
-    resources :booking_items, only: [:destroy]
-  end
+  resources :booking_items, only: [:destroy]
 
   # wishlist
-  resources :watches do
+  resources :watches, only: [] do
     resources :bookmarks, only: [:index, :new, :create]
   end
   resources :bookmarks, only: [:destroy]
