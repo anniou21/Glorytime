@@ -9,7 +9,7 @@
 require 'open-uri'
 
 puts 'Cleaning database...'
-[Review, BookingItem, Booking, Shop, User, Watch].each(&:destroy_all)
+[Review, BookingItem, Booking, Bookmark, Shop, User, Watch].each(&:destroy_all)
 
 puts 'Creating Users...'
 # users_attributes = [
@@ -840,3 +840,26 @@ reviews_attributes = [
 
 Review.create!(reviews_attributes)
 
+
+puts 'Creating Bookmarks ...'
+
+bookmarks_attributes = [
+  {
+    user: User.find_by(name: 'Anniou'),
+    watch: Watch.find_by(watch: watch_3)
+  },
+  {
+    user: User.find_by(name: 'Arafath'),
+    watch: Watch.find_by(watch: watch_7)
+  },
+  {
+    user: User.find_by(name: 'Etienne'),
+    watch: Watch.find_by(watch: watch_14)
+  },
+  {
+    user: User.find_by(name: 'Cedrik'),
+    watch: Watch.find_by(watch: watch_28)
+  }
+]
+
+Bookmark.creat!(bookmarks_attributes)
