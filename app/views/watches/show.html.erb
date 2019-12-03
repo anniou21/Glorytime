@@ -17,8 +17,13 @@
                 <div id="main-img">
                      <%= cl_image_tag @watch.photo.key, height: 500, width: 400, crop: :fill %>
               </div>
-
-              <span id="favorite-button" onclick="favoriteAdd()" class="btn"><i class="fa fa-heart"></i></span>
+              <!-- Wishlist -->
+              <% if !current_user.bookmarks.pluck(:watch_id).include?(@watch.id) %>
+                <%= link_to watch_bookmarks_path(@watch), method: :post do %>
+                  <span id="favorite-button" class="btn"><i class="fa fa-heart"></i></span>
+                <% end %>
+              <% end %>
+              <!-- END Wishlist -->
           </div>
           <div class="col-sm-12 col-md-6" id="product-information">
              <h2 class="p-0 m-0" id="product-title"><%= @watch.brand %></h2>
@@ -36,16 +41,18 @@
                  </div>
              </div>
 
+                <hr class="divider-featurette">
 <div id="add-to-cart">
             <%= simple_form_for([@booking, @booking_item]) do |f| %>
               <%= f.input :watch_id, as: :hidden %>
-              <div>
+              <div class="duration-location">
                 <h2>Période de location</h2>
-                <%= f.input :start_date, as: :string, required: false, input_html: {class: "datepicker"}, label: false %>
-                <%= f.input :end_date, as: :string, label: false %>
+                <%= f.input :start_date, as: :string, required: false, input_html: {class: "datepicker"}, label: false, placeholder: "Début de location" %>
+                <%= f.input :end_date, as: :string, label: false, placeholder: "Fin de location" %>
                 </div>
               </div>
-              <%= f.submit 'Ajouter au panier', class: "btn btn-flat" %>
+              <hr class="divider-featurette">
+              <%= f.submit 'Ajouter au panier', class: "btn-panier btn btn-flat" %>
             <% end %>
           </div>
         </div>
@@ -98,7 +105,7 @@ Boutique de Montres et bijoux de luxe : Horlogerie, Joaillerie</small></span>
 
                <div id="add-to-cart" class="">
 
-                   <button class="btn btn-flat"> En savoir plus</button>
+                   <button class="btn btn-flat"> <%=link_to "En savoir plus", shop_path%></button>
 
                </div>
 
