@@ -16,9 +16,13 @@
           <li class="nav-item">
             <%= link_to "Montres", watches_path, class: "nav-link" %>
           </li>
-          <li class="nav-item">
-            <%= link_to '|<i class="fas fa-shopping-basket"></i>| '.html_safe,  bookings_path(@booking), class: "nav-link" %>
+          <li class="nav-item position-relative">
+            <%= link_to '|<i class="fas fa-shopping-basket"></i>| '.html_safe,  booking_path(@booking), class: "nav-link" %>
+            <div class="numbasket">
+              <%= current_user.get_items %>
+            </div>
           </li>
+
         </ul>
       </div>
 
@@ -42,3 +46,4 @@
     </div>
   </div>
 </div>
+

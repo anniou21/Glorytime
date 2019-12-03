@@ -1,42 +1,37 @@
-
-  <div class="container-booking">
-    <div class="d-flex justify-content-between">
-      <h1>Détails de la location</h1>
-      <h2><%= @booking.price.to_i %>€</h2>
-      <%= form_tag orders_path do %>
+<div class="container-booking">
+  <div class="d-flex justify-content-between">
+    <h1 id="couleur_titre">Panier</h1>
+    <h2><%= @booking.price.to_i %>€</h2>
+    <%= form_tag orders_path do %>
       <%= hidden_field_tag 'booking_id', @booking.id %>
-      <%= submit_tag 'Purchase', class: 'btn btn-primary' %>
-      <% end %>
-    </div>
-    <br/>
-    <table class="table">
-      <thead>
-        <tr>
-          <th scope="col">#</th>
-          <th scope="col">Montre</th>
-          <th scope="col">Modèle</th>
-          <th scope="col">Date</th>
-          <th scope="col">Prix</th>
-          <th scope="col">Statut</th>
-        </tr>
-      </thead>
-      <tbody>
-        <% @booking_items.each_with_index do |item, index| %>
-          <%  if item.watch %>
-            <tr>
-              <th scope="row"><%= index + 1 %></th>
-              <td><%=  item.watch.brand %></td>
-              <td><%=  item.watch.model %></td>
-              <td><%=  item.created_at %></td>
-              <td><%=  item.cost.to_i %> €</td>
-              <td>✅<%= @booking.status %></td>
-            </tr>
-          <% end %>
-        <% end %>
-      </tbody>
-    </table>
+      <%= submit_tag 'Paiement', class: 'float-right btn btn-flat', id: "button_paiement" %>
+    <% end %>
   </div>
-
-
-
-
+  <br/>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Montre</th>
+        <th scope="col">Modèle</th>
+        <th scope="col">Date</th>
+        <th scope="col">Prix</th>
+        <th scope="col">Statut</th>
+        <th scopre="col">Annulation</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @booking_items.each_with_index do |item, index| %>
+        <tr>
+          <th scope="row"><%= index + 1 %></th>
+          <td><%= item.watch.brand %></td>
+          <td><%= item.watch.model %></td>
+          <td><%= item.created_at %></td>
+          <td><%= item.cost.to_i %> €</td>
+          <td><%= item.status %></td>
+          <td><%= link_to 'Annulation', booking_item_path(item), method: :delete, data: {confirm: "Êtes-vous sur de vouloir supprimer cette montre ?"} %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

@@ -11,4 +11,5 @@ class BookingsController < ApplicationController
   def basket
     @bookings = Booking.where(status:'pending', user_id: current_user.id)
   end
+
 end
