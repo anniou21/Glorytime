@@ -1,3 +1,9 @@
+<div class="banner-dashboard" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= image_path "banner-dashboard.jpg", height: 200, width: 1080 %>')">
+  <div class="container">
+    <p class="banner-dashboard-text"> / Dashboard</p>
+  </div>
+</div>
+
 <div class="container container-dashboard">
   <div class="row profile" display="flex">
     <div class="col-md-3 mt-0">
@@ -137,13 +143,12 @@
                           <strong class="d-block font-weight-bold">
                             <%= bookmark.watch.brand %> </strong>
                             <%= bookmark.watch.price %> €
-                          <%= link_to '<i class="far fa-times-circle"></i>'.html_safe, bookmark_path(bookmark), method: :delete, data: {confirm: "Êtes-vous sur de vouloir supprimer cet article ?"}%>
-
+                          <%= link_to '<i class="far fa-times-circle"></i>'.html_safe, bookmark_path(bookmark), method: :delete, data: {confirm: "Êtes-vous sur de vouloir supprimer la montre ?"}%>
                         </p>
                       </div>
                     <% end %>
                 </th>
-              </tr>
+              </tr
             </thead>
             <tbody>
               <tr>
