@@ -129,23 +129,19 @@
           <table class="table">
             <thead>
               <tr>
+                  <% current_user.bookmarks.each do |bookmark| %>
                 <th scope="col">
-                  <div class="media text-muted pt-3">
-                      <%= image_tag "https://res.cloudinary.com/anniou/image/upload/v1575040522/3MT94ypFYomCqRy4rwuVqfoW.png", class: "avatar-bordered mr-3", alt: "avatar-bordered" %>
-                      <p class="media-body pb-3 mb-0 small lh-125">
-                        <strong class="d-block text-gray-dark">BRAND| MODEL</strong>
-                        Description de la montre ...
-                      </p>
-                    </div>
-                </th>
-                <th scope="col">
-                  <div class="media text-muted pt-3">
-                      <%= image_tag "https://res.cloudinary.com/anniou/image/upload/v1575040519/hepWZbgYnPyELhWu5WrBE7ec.png", class: "avatar-bordered mr-3", alt: "avatar-bordered" %>
-                      <p class="media-body pb-3 mb-0 small lh-125">
-                        <strong class="d-block text-gray-dark">BRAND| MODEL</strong>
-                        Description de la montre ...
-                      </p>
-                    </div>
+                    <div class="media text-muted pt-3">
+                        <%= cl_image_tag bookmark.watch.photo.key, class: "avatar-bordered mr-3", height: 46, width: 40 %>
+                        <p class="media-body pb-3 mb-0 small lh-125">
+                          <strong class="d-block font-weight-bold">
+                            <%= bookmark.watch.brand %> </strong>
+                            <%= bookmark.watch.price %> €
+                          <%= link_to '<i class="far fa-times-circle"></i>'.html_safe, bookmark_path(bookmark), method: :delete, data: {confirm: "Êtes-vous sur de vouloir supprimer cet article ?"}%>
+
+                        </p>
+                      </div>
+                    <% end %>
                 </th>
               </tr>
             </thead>
@@ -159,3 +155,4 @@
     </div>
   </div>
 </div>
+

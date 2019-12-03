@@ -25,9 +25,4 @@ class BookmarksController < ApplicationController
     redirect_to dashboard_path
   end
 
-  private
-
-  # def bookmark_params
-  #   params.require(:bookmark).permit(:user_id)
-  # end
 end
