@@ -860,19 +860,19 @@ puts 'Creating Bookmarks ...'
 bookmarks_attributes = [
   {
     user: User.find_by(name: 'Anniou'),
-    watch: Watch.find_by(watch: watch_3)
+    watch: watch_3
   },
   {
     user: User.find_by(name: 'Arafath'),
-    watch: Watch.find_by(watch: watch_7)
+    watch: watch_7
   },
   {
     user: User.find_by(name: 'Etienne'),
-    watch: Watch.find_by(watch: watch_14)
+    watch: watch_14
   },
   {
     user: User.find_by(name: 'Cedrik'),
-    watch: Watch.find_by(watch: watch_28)
+    watch: watch_28
   }
 ]
 
