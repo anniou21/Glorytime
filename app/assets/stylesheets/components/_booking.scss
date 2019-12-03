@@ -1,14 +1,49 @@
 .container-booking {
+  color: black;
+  border: 2px solid black;
+  width: 1070px;
+  height: 300px;
+  margin: 30px 0px 30px 0px;
+  padding: 20px;
+  margin-left: 250px;
+  box-shadow: 5px 3px 3px grey;
+}
+
+.container-paiement {
+  color: black;
+  border: 2px solid black;
+  width: 150px;
+  height: 80px;
+  margin: 30px 0px 30px 0px;
+  padding: 20px;
+  margin-left: 250px;
+  box-shadow: 5px 3px 3px grey;
+}
+
+#button_paiement {
   color: white;
+  border-radius: 10px;
+  font-size: 16px;
+  justify-content: right;
+
+}
+
+.container-paid {
+  color: black;
   border: 2px solid black;
   width: 821px;
   height: 300px;
   margin: 30px 0px 30px 0px;
   padding: 20px;
   margin-left: 250px;
-
 }
 
 .table th, .table td {
   color: black;
 }
+
+#couleur_titre {
+  text-align: center;
+}
+
+
