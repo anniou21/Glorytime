@@ -208,7 +208,7 @@ puts 'Creating Watches...'
     brand: "Omega",
     model: "SPEEDMASTER '57
 CHRONOGRAPHE OMEGA CO‑AXIAL 41,5 MM",
-    sku: "SPEEDMASTER '57 CHRONOGRAPHE OMEGA CO‑AXIAL 41,5 MM"
+    sku: "SPEEDMASTER '57 CHRONOGRAPHE OMEGA CO‑AXIAL 41,5 MM",
     price_cents: 780000,
     description: "Ce modèle arbore un cadran noir laqué ponctué d'un compteur des secondes à 9 heures et d'un compteur des heures et des minutes du chronographe à 3 heures. On trouve également une aiguille centrale des secondes du chronographe ainsi qu'un guichet de date à 6 heures.
 ",
