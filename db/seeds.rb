@@ -763,7 +763,7 @@ booking_items_attributes =[
   {
     booking: Booking.find_by(user: User.find_by(name: 'Cedrik')),
     watch: watch_4.reload,
-    status: 'confirmed',
+    status: 'paid',
     start_date: '3 Janvier 2020',
     end_date: '6 Janvier 2020',
     cost: 300,
