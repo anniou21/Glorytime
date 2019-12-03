@@ -14,6 +14,9 @@ Rails.application.routes.draw do
   resources :booking_items, only: [:destroy]
 
   resource :dashboard, only: [:show]
+  resources :orders, only: [:show, :create] do
+    resources :payments, only: :new
+  end
   # get '/dashboard', to: 'dashboards#show'
 
   # FLOW OWNER (si on a le temps)

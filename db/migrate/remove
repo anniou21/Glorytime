@@ -1,3 +1,24 @@
+
+
+Order generation
+
+model
+rails g model Order state:string price_cents:monetize checkout_session_id:string user:references booking:references
+
+t.monetize :amount, currency: { present: false }
+rails db:migrate
+
+# app/models/order.rb
+monetize :amount_cents
+
+# app/models/user.rb
+has_many :orders
+
+
+
+
+
+
 remove
 
 rails g migration RemovePriceCentsCentsFromWatches
