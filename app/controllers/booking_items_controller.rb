@@ -9,14 +9,18 @@ class BookingItemsController < ApplicationController
     end
   end
 
-
   def show
     @booking_item = BookingItem.find(params[:id])
     @watch = Watch.find(params[:watch_id])
   end
 
-  # def destroy
-  # end
+  def destroy
+    @booking_item = BookingItem.find(params[:watch_id])
+    @booking_item.destroy
+    flash[:notice] = "Votre montre a bien été supprimée"
+    redirect_to booking_path(@booking)
+  end
+
   private
 
   def booking_item_params
