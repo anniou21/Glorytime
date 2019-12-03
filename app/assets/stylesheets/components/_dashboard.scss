@@ -140,6 +140,7 @@ body {
 }
 
 
+
 #status {
    text-align: center;
   margin-top: 10px;
@@ -147,5 +148,18 @@ body {
   border-radius: 5px;
 }
 
+
+
+.banner-dashboard {
+  height: 250px;
+  background-size: cover;
+  background-position: center;
+}
+
+.banner-dashboard-text {
+  color: white;
+  font-size: 40px;
+  padding-top: 90px;
+}
 
 
