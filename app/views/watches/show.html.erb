@@ -20,8 +20,10 @@
               <!-- Wishlist -->
               <% if !current_user.bookmarks.pluck(:watch_id).include?(@watch.id) %>
                 <%= link_to watch_bookmarks_path(@watch), method: :post do %>
-                  <span id="favorite-button" class="btn"><i class="fa fa-heart"></i></span>
+                  <span id="favorite-button" class="btn"><i class="fa fa-heart grey-heart"></i></span>
                 <% end %>
+              <% else %>
+                  <span id="favorite-button" class="btn"><i class="fa fa-heart red-heart"></i></span>
               <% end %>
               <!-- END Wishlist -->
           </div>
@@ -81,12 +83,12 @@
               </div>
               <div class="container-fluid">
                   <div class="row mx-auto" id="thumbnail-container">
-                       <p><strong>Adresse :</strong> 6 Avenue Franklin Delano Roosevelt, 75008 Paris</p>
+                       <p><strong>Adresse :</strong> <%= @watch.shop.address %></p>
                   </div>
               </div>
           </div>
           <div class="col-sm-12 col-md-6" id="product-information">
-             <h2 class="p-0 m-0" id="product-title">Champs d'Or</h2>
+             <h2 class="p-0 m-0" id="product-title"><%= @watch.shop.name %></h2>
               <span id="product-short"><small>
 Boutique de Montres et bijoux de luxe : Horlogerie, Joaillerie</small></span>
             <div class="container-fluid">
