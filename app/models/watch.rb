@@ -12,6 +12,8 @@ class Watch < ApplicationRecord
     using: {
       tsearch: { prefix: true }
     }
-
+  monetize :cost_per_day_cents
+  monetize :price_cents
 end
 
+# rails g model Order state:string watch_sku:string amount:monetize checkout_session_id:string user:references watch:references

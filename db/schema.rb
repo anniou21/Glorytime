@@ -10,7 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_02_102843) do
+
+ActiveRecord::Schema.define(version: 2019_12_03_090658) do
+
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -44,7 +46,7 @@ ActiveRecord::Schema.define(version: 2019_12_02_102843) do
     t.date "end_date"
     t.date "start_date"
     t.string "status"
-    t.integer "cost"
+    t.integer "cost_cents", default: 0, null: false
     t.index ["booking_id"], name: "index_booking_items_on_booking_id"
     t.index ["watch_id"], name: "index_booking_items_on_watch_id"
   end
@@ -52,11 +54,24 @@ ActiveRecord::Schema.define(version: 2019_12_02_102843) do
   create_table "bookings", force: :cascade do |t|
     t.string "status"
     t.bigint "user_id"
-    t.integer "price_total"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "price_cents", default: 0, null: false
     t.index ["user_id"], name: "index_bookings_on_user_id"
   end
+
+
+  create_table "orders", force: :cascade do |t|
+    t.string "state"
+    t.integer "price_cents", default: 0, null: false
+    t.string "price_currency", default: "EUR", null: false
+    t.string "checkout_session_id"
+    t.bigint "user_id"
+    t.bigint "booking_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["booking_id"], name: "index_orders_on_booking_id"
+    t.index ["user_id"], name: "index_orders_on_user_id"
 
   create_table "bookmarks", force: :cascade do |t|
     t.bigint "user_id"
@@ -65,6 +80,7 @@ ActiveRecord::Schema.define(version: 2019_12_02_102843) do
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_bookmarks_on_user_id"
     t.index ["watch_id"], name: "index_bookmarks_on_watch_id"
+
   end
 
   create_table "reviews", force: :cascade do |t|
@@ -105,13 +121,14 @@ ActiveRecord::Schema.define(version: 2019_12_02_102843) do
   create_table "watches", force: :cascade do |t|
     t.string "brand"
     t.string "model"
-    t.integer "price"
     t.string "description"
     t.boolean "availability"
     t.bigint "shop_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "cost_per_day"
+    t.string "sku"
+    t.integer "price_cents", default: 0, null: false
+    t.integer "cost_per_day_cents", default: 0, null: false
     t.index ["shop_id"], name: "index_watches_on_shop_id"
   end
 
@@ -119,6 +136,8 @@ ActiveRecord::Schema.define(version: 2019_12_02_102843) do
   add_foreign_key "booking_items", "bookings"
   add_foreign_key "booking_items", "watches"
   add_foreign_key "bookings", "users"
+  add_foreign_key "orders", "bookings"
+  add_foreign_key "orders", "users"
   add_foreign_key "bookmarks", "users"
   add_foreign_key "bookmarks", "watches"
   add_foreign_key "reviews", "booking_items"

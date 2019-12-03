@@ -1,10 +1,11 @@
 class BookingItemsController < ApplicationController
   before_action :authenticate_user!
   def create
-    booking = Booking.find params[:booking_id]
+    @booking = Booking.find params[:booking_id]
     @booking_item = BookingItem.new(booking_item_params)
-    @booking_item.booking = booking
+    @booking_item.booking = @booking
     if @booking_item.save
+      update_booking_price
       redirect_to watch_path(@booking_item.watch)
     end
   end
@@ -25,5 +26,10 @@ class BookingItemsController < ApplicationController
 
   def booking_item_params
     params.require(:booking_item).permit(:watch_id, :start_date, :end_date)
+  end
+
+  def update_booking_price
+    @booking.price_cents = @booking.booking_items.reduce(0) { |sum, item| sum + item.cost_cents}
+    @booking.save
   end
 end

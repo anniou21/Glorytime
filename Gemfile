@@ -7,7 +7,7 @@ gem 'pg', '~> 0.21'
 gem 'puma'
 gem 'rails', '5.2.3'
 gem 'redis'
-
+gem 'money-rails'
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass', '~> 5.6.1'
 gem 'sassc-rails'
@@ -17,7 +17,7 @@ gem 'webpacker'
 gem 'devise'
 gem 'cloudinary', '~> 1.12.0'
 gem 'pg_search', '~> 2.3.0'
-
+gem 'stripe'
 group :development do
   gem 'web-console', '>= 3.3.0'
 end
