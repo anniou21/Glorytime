@@ -42,3 +42,9 @@
     </div>
   </div>
 </div>
+
+<% if user_signed_in? %>
+  <div class="numbasket">
+    <%= current_user.get_items %>
+  </div>
+<% end %>
