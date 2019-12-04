@@ -168,7 +168,7 @@ body {
   font-size: 11px;
   font-weight: 600;
   margin-left: 200px;
-  width:90px;
+  width:11%;
   top: 10px;
   display: flex;
   margin-top: -38px;
@@ -207,4 +207,8 @@ text-transform: uppercase;
   vertical-align: middle;
   line-height: 28px;
 
+}
+
+.search-row form {
+  margin-bottom: 17px;
 }
