@@ -1,1 +1,35 @@
-@order
+<h1>Merci pour votre location !</h1>
+
+
+<h1>Liste de montres</h1>
+<div>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Montre</th>
+        <th scope="col">Modèle</th>
+        <th scope="col">Date</th>
+        <th scope="col">Prix</th>
+        <th scope="col">Statut</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @booking_items.each_with_index do |item, index| %>
+        <tr>
+          <th scope="row"><%= index + 1 %></th>
+          <td><%= item.watch.brand %></td>
+          <td><%= item.watch.model %></td>
+          <td><%= item.created_at %></td>
+          <td><%= item.cost.to_i %> €</td>
+          <td><%= item.status %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+
+<h1>Prix de la commande</h1>
+<h2><%= @booking.price.to_i %>€</h2>
+
+<h1>Adresse du magasin</h1>
