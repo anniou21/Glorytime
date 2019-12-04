@@ -5,8 +5,15 @@
   height: 300px;
   margin: 30px 0px 30px 0px;
   padding: 20px;
-  margin-left: 250px;
-  box-shadow: 5px 3px 3px grey;
+  margin-left: 120px;
+}
+
+.fond-jaune {
+    height: 700px;
+    width: 100%;
+    background-color: #e6b31e;
+    padding: 50px;
+    padding-top: 95px;
 }
 
 .container-paiement {
@@ -40,8 +47,11 @@
 
 .table th, .table td {
   color: black;
+  border-collapse:collapse;
+  border-top: 2px solid black;
 }
 
 #couleur_titre {
   text-align: center;
 }
+

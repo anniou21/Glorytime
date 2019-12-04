@@ -1,37 +1,41 @@
-<div class="container-booking">
-  <div class="d-flex justify-content-between">
-    <h1 id="couleur_titre">Panier</h1>
-    <h2><%= @booking.price.to_i %>€</h2>
-    <%= form_tag orders_path do %>
-      <%= hidden_field_tag 'booking_id', @booking.id %>
-      <%= submit_tag 'Paiement', class: 'float-right btn btn-flat', id: "button_paiement" %>
-    <% end %>
-  </div>
-  <br/>
-  <table class="table">
-    <thead>
-      <tr>
-        <th scope="col">#</th>
-        <th scope="col">Montre</th>
-        <th scope="col">Modèle</th>
-        <th scope="col">Date</th>
-        <th scope="col">Prix</th>
-        <th scope="col">Statut</th>
-        <th scopre="col">Annulation</th>
-      </tr>
-    </thead>
-    <tbody>
-      <% @booking_items.each_with_index do |item, index| %>
-        <tr>
-          <th scope="row"><%= index + 1 %></th>
-          <td><%= item.watch.brand %></td>
-          <td><%= item.watch.model %></td>
-          <td><%= item.created_at %></td>
-          <td><%= item.cost.to_i %> €</td>
-          <td><%= item.status %></td>
-          <td><%= link_to 'Annulation', watch_booking_item_path(item), method: :delete, data: {confirm: "Êtes-vous sur de vouloir supprimer cette montre ?"} %></td>
-        </tr>
+ <div class="fond-jaune">
+        <h1 class="text-center">Ceci est votre panier !</h1>
+          <p class="text-center">Faites-en bon usage</p>
+  <div class="container-booking">
+    <div class="d-flex justify-content-between">
+      <h1 id="couleur_titre">Panier</h1>
+      <h2><%= @booking.price.to_i %>€</h2>
+      <%= form_tag orders_path do %>
+        <%= hidden_field_tag 'booking_id', @booking.id %>
+        <%= submit_tag 'Paiement', class: 'float-right btn btn-flat' %>
       <% end %>
-    </tbody>
-  </table>
+    </div>
+    <br/>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Photo</th>
+          <th scope="col">Montre</th>
+          <th scope="col">Modèle</th>
+          <th scope="col">Date</th>
+          <th scope="col">Prix</th>
+          <th scopre="col">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @booking_items.each_with_index do |item, index| %>
+          <tr>
+            <th scope="row"><%= index + 1 %></th>
+            <td><%= cl_image_tag item.watch.photo.key, height: 40, width: 50, crop: :fill %></td>
+            <td><%= item.watch.brand %></td>
+            <td><%= item.watch.model.truncate_words(1) %></td>
+            <td><%= item.created_at %></td>
+            <td><%= item.cost.to_i %> €</td>
+            <td><%= link_to 'Annulation', watch_booking_item_path(item), method: :delete, data: {confirm: "Êtes-vous sur de vouloir supprimer cette montre ?"}, class:'btn btn-danger' %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
 </div>

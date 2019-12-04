@@ -1,12 +1,12 @@
-<div class="container">
-  <div class="row py-4">
-    <div class="col-md-3"></div>
-
-
-    <div class="col">
-      <h1>Checkout summary</h1>
-      <p>Purchase of <strong><%# @order..name %></strong> for <strong><%= humanized_money_with_symbol @order.price_cents/100 %></strong></p>
-      <button id="pay" class="btn btn-primary">Pay</button>
+<div class="container-checkout">
+   <h1 class="page-title">Checkout summary</h1>
+    <article class="receipt">
+      <section class="receipt__half upper">
+        <p>Total à payer</p>
+        <h1><strong><%= humanized_money_with_symbol @order.price_cents/100 %></strong></h1>
+        <p class="sm"><strong>Le </strong><%= DateTime.now.strftime("%d/%m/%y - %H:%M")%></p>
+        <div class="receipt__content">
+          <button id="pay" class="btn btn-primary">Pay</button>
       <script src="https://js.stripe.com/v3/"></script>
       <script>
         const paymentButton = document.getElementById('pay');
@@ -17,6 +17,11 @@
           });
         });
       </script>
-    </div>
-  </div>
+        </div>
+      </section>
+
+      <section class="receipt__half lower">
+        <button class="btn btn-flat">Payer</button>
+      </section>
+    </article>
 </div>
