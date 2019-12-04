@@ -51,7 +51,10 @@
                 <%= select_tag :status, options_for_select(['pending', 'paid']),
                   class: "form-control"
                 %>
-                <%= submit_tag "Search", class: "button-dashboard" %>
+
+
+                <%= submit_tag "Rechercher", class: "btn btn-dark" %>
+
               <% end %>
           <table class="table">
             <thead>
@@ -177,7 +180,7 @@
           </table>
         </div>
           <div class="container mt-5">
-          <h1>Wishlist</h1>
+          <h1>Mes favoris</h1>
           <table class="table">
             <thead>
               <tr>
