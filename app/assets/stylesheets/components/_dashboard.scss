@@ -136,7 +136,7 @@ body {
     padding: 0.75rem;
     vertical-align: top;
     border-top: 5px solid
-#dee2e6;
+    #dee2e6;
 }
 
 
@@ -146,14 +146,7 @@ body {
   margin-top: 10px;
   width: 200px;
   border-radius: 5px;
-
-  .button {
-  width: 70px;
-  display: flex;
-
-  }
 }
-
 
 
 .banner-dashboard {
@@ -169,8 +162,21 @@ body {
 }
 
 
-.btn-dark {
 
-
+.button-dashboard {
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: 600;
+  margin-left: 200px;
+  width:90px;
+  top: 10px;
+  display: flex;
+  margin-top: -38px;
+  height: 38px;
+  background: #000000;
+  border-radius: 5px;
+  color:white;
 }
+
+
 
