@@ -22,6 +22,8 @@ $wizard: #4FACFF;
 .wrapper {
   padding-top: 40px;
   padding-bottom: 40px;
+  margin-bottom: 50px;
+  margin-top: 50px;
 
   &:focus {
     outline: 0;
@@ -52,6 +54,7 @@ $wizard: #4FACFF;
 
 .clash-card__image--barbarian {
   background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/barbarian-bg.jpg');
+  border-radius: 1px;
   img {
     width: 400px;
     position: absolute;
@@ -147,6 +150,7 @@ $wizard: #4FACFF;
   font-weight: 700;
   border-bottom-left-radius: $border-radius-size;
   border-bottom-right-radius: $border-radius-size;
+  border-radius: 1px;
 
   .one-third {
     width: 33%;
