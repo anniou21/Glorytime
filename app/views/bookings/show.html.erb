@@ -1,50 +1,42 @@
-<div class="container-booking">
-  <div class="d-flex justify-content-between">
-    <h1 id="couleur_titre">Panier</h1>
-    <h2><%= @booking.price.to_i %>€</h2>
-    <%= form_tag orders_path do %>
-      <%= hidden_field_tag 'booking_id', @booking.id %>
-      <%= submit_tag 'Paiement', class: 'float-right btn btn-flat', id: "button_paiement" %>
-    <% end %>
-  </div>
-  <br/>
-  <table class="table">
-    <thead>
-      <tr>
-        <th scope="col" class="titre_shop text-center">N°</th>
-        <th scope="col" class="titre_shop text-center">Montre</th>
-        <th scope="col" class="titre_shop text-center">Modèle</th>
-        <th scope="col" class="titre_shop text-center">Date</th>
-        <th scope="col" class="titre_shop text-center">Prix</th>
-        <th scope="col" class="titre_shop text-center">Statut</th>
-        <th scopre="col" class="titre_shop text-center">Annulation</th>
-      </tr>
-    </thead>
-    <tbody>
-      <% @booking_items.each_with_index do |item, index| %>
-        <tr>
-          <th scope="row"><%= index + 1 %></th>
-          <td class="text-center"><%= item.watch.brand %></td>
-          <td class="text-center"><%= item.watch.model %></td>
-          <td class="text-center"><%= item.created_at %></td>
-          <td class="text-center"><%= item.cost.to_i %> €</td>
-          <td class="text-center"><%= item.status %></td>
-          <td class="text-center"><%= link_to '<i class="fas fa-times"></i>'.html_safe, watch_booking_item_path(item), method: :delete, data: {confirm: "Êtes-vous sur de vouloir supprimer cette montre ?"} %></td>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
-</div>
 
-<div class="container-carroussel">
-  <div class="code" id="code">
-    <form action="https://immense-lowlands-36043.herokuapp.com/" method="post" id="cadeaux">
-      <label for="couleur_titre_2" id="text_cadeaux">Vous avez un code privilège ou une carte cadeau ?</label>
-      <input type="hidden" name="token">
-      <input id="discount_name" type="text" placeholder="Entrez votre code !">
-      <button type="submit" class="btn btn-flat"></button>
-      </form>
-<div class="d-flex justify-content-between">
+ <div class="fond-jaune">
+        <h1 class="text-center">Ceci est votre panier !</h1>
+          <p class="text-center">Faites-en bon usage</p>
+  <div class="container-booking">
+    <div class="d-flex justify-content-between">
+      <h1 id="couleur_titre">Panier</h1>
+      <h2><%= @booking.price.to_i %>€</h2>
+      <%= form_tag orders_path do %>
+        <%= hidden_field_tag 'booking_id', @booking.id %>
+        <%= submit_tag 'Paiement', class: 'float-right btn btn-flat' %>
+      <% end %>
+    </div>
+    <br/>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Photo</th>
+          <th scope="col">Montre</th>
+          <th scope="col">Modèle</th>
+          <th scope="col">Date</th>
+          <th scope="col">Prix</th>
+          <th scopre="col">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @booking_items.each_with_index do |item, index| %>
+          <tr>
+            <th scope="row"><%= index + 1 %></th>
+            <td><%= cl_image_tag item.watch.photo.key, height: 40, width: 50, crop: :fill %></td>
+            <td><%= item.watch.brand %></td>
+            <td><%= item.watch.model.truncate_words(1) %></td>
+            <td><%= item.created_at %></td>
+            <td><%= item.cost.to_i %> €</td>
+            <td><%= link_to 'Annulation', watch_booking_item_path(item), method: :delete, data: {confirm: "Êtes-vous sur de vouloir supprimer cette montre ?"}, class:'btn btn-danger' %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
   </div>
-</div>
 </div>
