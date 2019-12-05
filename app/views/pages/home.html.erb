@@ -1,18 +1,18 @@
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= image_path "banner-home.jpg", height: 200, width: 1080 %>')">
-  <div class="container">
-    <h1>Et vous, quelle montre allez-vous louer ?</h1>
 
-    <%= link_to 'Voir les montres', watches_path, class:'btn btn-flat' %>
+  <div class="container-home text-center">
+    <h1>Avec Gold Watch,<br/>quelle montre allez-vous louer ?</h1>
 
-    <div id="container">
-    </div>
+    <%= link_to 'Voir les montres', watches_path, class:'btn btn-low' %>
   </div>
 </div>
+
+<!-- PRESENTATION -->
 <div class="container mt-5">
       <section class="features-block">
         <div class="container">
           <div class="row justify-content-center">
-            <div class="col-12 text-left">
+            <div class="col-12 text-center">
               <h1>GOLD WATCH</h1>
               <p class="lead">Comment ça marche ?</p>
             </div>
@@ -21,40 +21,68 @@
           <div class="row text-left mt-5">
             <div class="col-12 col-sm-8 col-md-4 col-lg-3 m-sm-auto mr-md-auto ml-md-0">
               <%= image_tag "home-images/searching.svg", width: 230 %>
-              <h3><strong>1 - Rechercher votre montre</strong></h3>
-              <p>Parmi une large gamme de montres de luxe à disposition, choisissez parmi des marques connues comme IWC, Tag Huer, Rolex ...</p>
+              <h3><strong>1 - Recherchez votre montre</strong></h3>
+              <p>Nous proposons une large gamme de montres de luxe. Choisissez parmi des marques iconiques comme IWC, Tag Heuer, Rolex ...</p>
             </div>
 
             <div class="col-12 col-sm-8 col-md-4 col-lg-3 m-sm-auto pt-5 pt-md-0">
               <%= image_tag "home-images/rent.svg", width: 230 %>
-              <h3><strong>2 - Louer votre montre</strong></h3>
-              <p> La location de montres de luxe n'a jamais été aussi simple avec Gold watch ! Ne pas oublier le dépôt de garantie prévu pour sécuriser la location.</p>
+              <h3><strong>2 - Louez votre montre</strong></h3>
+              <p> La location de montres de luxe n'a jamais été aussi simple avec Gold watch ! En quelques clics, réservez votre montre et profitez en pleinement.</p>
             </div>
 
             <div class="col-12 col-sm-8 col-md-4 col-lg-3 m-sm-auto ml-md-auto mr-md-0 pt-5 pt-md-0">
               <%= image_tag "home-images/horloger.svg", width: 230 %>
               <h3><strong>3 - Récupérer chez l'horloger</strong></h3>
-              <p>Notre réseaux d'horlogers répartis dans tout Paris, va vous permettre d'aller récupérer votre montre chez un spécialiste.</p>
+              <p>Notre réseaux d'horlogers répartis dans tout Paris, va vous permettre d'aller récupérer votre montre chez un spécialiste. fekjfezbfjezbfz</p>
             </div>
           </div>
         </div>
       </section>
 </div>
+<!-- FIN PRESENTATION -->
 
-
-<div class="banner-features" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= image_path "banner-features.jpg", height: 500, width: 1030 %>')">
-  <div class="container">
-          <h3><strong>Ils nous font confiance</strong></h3>
-            <div class="company d-flex justify-content-center">
-            <%= image_tag 'companies/iwc-white.png', width:'100', class:'m-3' %>
-            <%= image_tag 'companies/audmards-piguet-white.png', width:'100', class:'m-3'  %>
-            <%= image_tag 'companies/omega-white.png', width:'100', class:'m-3'  %>
-            <%= image_tag 'companies/rolex-white.png', width:'100', class:'m-3'  %>
-            <%= image_tag 'companies/tag-heuer-white.png', width:'100', class:'m-3'  %>
-            <%= image_tag 'companies/tissot-white.png', width:'100', class:'m-3' %>
+<!-- CAROUSEL WATCHES -->
+<div class="watches-home">
+  <div class="container mt-5">
+      <h2>Les montres disponibles </h2>
+      <hr>
+    <div class="cards-watches-home">
+      <% @watches.each do |watch| %>
+      <%= link_to watch_path(watch) do %>
+        <div class="card d-flex justify-content-around align-items-center pt-3">
+          <%= cl_image_tag watch.photo.key, height: 200, width: 210, crop: :fill %>
+          <div class="card-body text-center">
+            <p class="card-text1 text-center"><%= watch.brand %></p>
+            <p class="card-text2 text-center"><%= watch.model.truncate_words(2) %><br/></p>
+              <small class="card-text3 text-muted text-center"><%= watch.price %> € | Prix de vente</small>
           </div>
+        </div>
+        <% end %>
+      <% end %>
+    </div>
   </div>
 </div>
+
+
+<!-- FIN CAROUSEL WATCHES -->
+
+<div class="chome">
+    <div class="banner-features" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= image_path "banner-features.jpg", height: 500, width: 1030 %>')">
+    <div class="container">
+            <h3><strong>Ils nous font confiance</strong></h3>
+              <div class="company d-flex justify-content-center">
+              <%= image_tag 'companies/iwc-white.png', width:'100', class:'m-5' %>
+              <%= image_tag 'companies/audmards-piguet-white.png', width:'100', class:'m-5'  %>
+              <%= image_tag 'companies/omega-white.png', width:'100', class:'m-5'  %>
+              <%= image_tag 'companies/rolex-white.png', width:'100', class:'m-5'  %>
+              <%= image_tag 'companies/tag-heuer-white.png', width:'100', class:'m-5'  %>
+              <%= image_tag 'companies/tissot-white.png', width:'100', class:'m-5' %>
+            </div>
+    </div>
+</div>
+</div>
+
 
 
 

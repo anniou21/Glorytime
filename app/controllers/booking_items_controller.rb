@@ -18,6 +18,7 @@ class BookingItemsController < ApplicationController
   def destroy
     @booking_item = BookingItem.find(params[:watch_id])
     @booking_item.destroy
+    update_booking_price
     flash[:notice] = "Votre montre a bien été supprimée"
     redirect_to booking_path(@booking)
   end

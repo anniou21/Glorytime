@@ -37,7 +37,8 @@
                 <!-- END STAT -->
           <div>
             <h6 class="profile-desc-title text-center">A propos de moi</h6>
-            <span class="profile-desc-text pl-3"><%= current_user.description %></span>
+            <p class="profile-desc-title text-center" id="ptext">Passionné de belles montres, <br>j'aime tout ce qui touche à l'horlogerie.</p>
+            <!-- <span class="profile-desc-text pl-3"><%= current_user.description %></span> -->
           </div>
         </div>
       </div>
@@ -45,13 +46,16 @@
 
     <div class="col-md-9">
       <div class="profile-content">
-        <div class="container mt-5">
+        <div class="container mt-5 search-row">
           <h1>Mes commandes</h1>
               <%= form_tag dashboard_path, method: :get do %>
-                <%= select_tag :status, options_for_select(['pending', 'paid']),
+                <%= select_tag :status, options_for_select(['Select a status','pending', 'paid']),
                   class: "form-control"
                 %>
-                <%= submit_tag "Search", class: "btn btn-dark" %>
+
+
+                <%= submit_tag "Rechercher", class: "btn btn-dark button-dashboard" %>
+
               <% end %>
           <table class="table">
             <thead>
@@ -95,7 +99,7 @@
                 </td>
 
                 <td>
-                  <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#modal-<%= b.id %>">
+                  <button type="button" class="btn btn-dark btn-details" data-toggle="modal" data-target="#modal-<%= b.id %>">
                     Voir détails
                   </button>
                 </td>
@@ -123,7 +127,7 @@
                                 <br>
 
                                 <% if b.status == 'pending' %>
-                                  <%= link_to'Voir panier', booking_path(@booking), class:"btn basket btn-dark btn-sm m-2" %>
+                                  <%= link_to'Voir panier', booking_path(@booking), class:"btn basket btn-dark btn-sm m-2 btn-modal" %>
                                 <% end %>
                               </div>
                               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -177,7 +181,7 @@
           </table>
         </div>
           <div class="container mt-5">
-          <h1>Wishlist</h1>
+          <h1>Mes favoris</h1>
           <table class="table">
             <thead>
               <tr>

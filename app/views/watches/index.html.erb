@@ -1,12 +1,11 @@
 <div class="searchbar-div">
-  <%= form_tag watches_path,class:"form-inline my-2 my-lg-0", id:"search_field", method: :get do %>
+    <%= form_tag watches_path, class:"form-inline my-2 my-lg-0", id:"search_field", method: :get do %>
       <%= text_field_tag :query,
-      params[:query], style:'width:1080px',
+      params[:query], style:'width: 600px; height: 51px;',
       class: "form-control",
       type: "search",
-      placeholder: "ex: Rolex Submariner ..." %>
-
-    <%= submit_tag "Search", class: "btn btn-flat" %>
+      placeholder: "ex. : Rolex Submariner..." %>
+      <%= submit_tag 'Rechercher', class: "btn btn-low" %>
   <% end %>
 </div>
 
