@@ -19,8 +19,9 @@ Rails.application.routes.draw do
     resources :payments, only: :new
   end
 
-  resources :booking_items, only: [:destroy]
-
+  resources :watches do
+    resources :booking_items, only: [:destroy]
+  end
   # wishlist
   resources :watches, only: [] do
     resources :bookmarks, only: [:index, :new, :create]

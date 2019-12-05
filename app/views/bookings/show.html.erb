@@ -29,9 +29,11 @@
           <td><%= item.created_at %></td>
           <td><%= item.cost.to_i %> €</td>
           <td><%= item.status %></td>
-          <td><%= link_to 'Annulation', booking_item_path(item), method: :delete, data: {confirm: "Êtes-vous sur de vouloir supprimer cette montre ?"} %></td>
+          <td><%= link_to 'Annulation', watch_booking_item_path(item), method: :delete, data: {confirm: "Êtes-vous sur de vouloir supprimer cette montre ?"} %></td>
         </tr>
       <% end %>
     </tbody>
   </table>
 </div>
+
+<%= link_to 'Voir les montres', watches_path, class:'btn btn-flat' %>

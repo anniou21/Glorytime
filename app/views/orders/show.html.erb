@@ -1,35 +1,66 @@
-<h1>Merci pour votre location !</h1>
 
 
-<h1>Liste de montres</h1>
-<div>
-<table class="table">
-    <thead>
-      <tr>
-        <th scope="col">#</th>
-        <th scope="col">Montre</th>
-        <th scope="col">Modèle</th>
-        <th scope="col">Date</th>
-        <th scope="col">Prix</th>
-        <th scope="col">Statut</th>
-      </tr>
-    </thead>
-    <tbody>
-      <% @booking_items.each_with_index do |item, index| %>
-        <tr>
-          <th scope="row"><%= index + 1 %></th>
-          <td><%= item.watch.brand %></td>
-          <td><%= item.watch.model %></td>
-          <td><%= item.created_at %></td>
-          <td><%= item.cost.to_i %> €</td>
-          <td><%= item.status %></td>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
-</div>
+<div class="slide-container">
 
-<h1>Prix de la commande</h1>
-<h2><%= @booking.price.to_i %>€</h2>
+  <div class="wrapper">
+    <div class="clash-card barbarian">
+          <%= image_tag 'watches-thanks.jpg', class:'clash-card__image clash-card__image--barbarian' do %>
+          <% end %>
+          <div class="clash-card__unit-name" >Merci pour votre commande !</div>
+            <div class="clash-card__unit-description">
+              <table class="table-recap">
+                <thead>
+                    <tr>
+                      <th scope="col">Modèle</strong></td>
+                      <th scope="col">Période</strong></td>
+                      <th scope="col">Boutique</strong></td>
+                      <th scope="col">Adresse</strong></td>
+                      <th scope="col">Prix</strong></td>
+                    </tr>
+                </thead>
+                <tbody>
+                  <% @booking_items.each_with_index do |item, index| %>
+                    <tr>
+                      <td><strong> <%= item.watch.model.truncate_words(2) %></strong></td>
+                      <td><%= item.start_date.strftime("%d/%m/%Y") %></td>
+                      <td><%= item.watch.shop.name %></td>
+                      <td><strong><%= item.watch.shop.address.truncate_words(6)%></strong></td>
+                      <td><%= item.cost.to_i %> €</td>
+                    </tr>
+                  <% end %>
+                </tbody>
+              </table>
+              <hr style="border: 0.7px solid black">
+            </div>
+      <div class="clash-card__unit-stats clash-card__unit-stats--barbarian clearfix">
+        <div class="one-third">
+          <div class="stat">Payé</div>
+<!--           <div class="stat-value">@booking_items.start</div> -->
+        </div>
 
-<h1>Adresse du magasin</h1>
+        <div class="one-third">
+          <div class="stat">
+            <% if @booking_items.length < 2 %>
+              <%= @booking_items.length %> montre
+            <% else %>
+              <%= @booking_items.length %> montres
+            <% end %>
+          </div>
+<!--           <div class="stat-value"></div> -->
+        </div>
+
+        <div class="one-third no-border">
+          <div class="stat"><%= @booking.price.to_i %> €</div>
+ <!--          <div class="stat-value"></div> -->
+        </div>
+
+      </div>
+
+    </div> <!-- end clash-card barbarian-->
+  </div> <!-- end wrapper -->
+
+
+
+
+
+
