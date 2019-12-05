@@ -9,7 +9,7 @@
 require 'open-uri'
 
 puts 'Cleaning database...'
-[Review, BookingItem, Booking, Bookmark, Shop, User, Watch].each(&:destroy_all)
+[Review, Order, BookingItem, Booking, Bookmark, Watch, Shop, User].each(&:destroy_all)
 
 puts 'Creating Users...'
 # users_attributes = [

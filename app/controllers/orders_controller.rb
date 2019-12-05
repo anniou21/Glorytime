@@ -18,5 +18,4 @@ class OrdersController < ApplicationController
     @order = current_user.orders.find(params[:id])
     @booking_items = @booking.booking_items # array with all bookings item for current user
   end
-
 end
