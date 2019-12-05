@@ -11,27 +11,40 @@
   <table class="table">
     <thead>
       <tr>
-        <th scope="col">#</th>
-        <th scope="col">Montre</th>
-        <th scope="col">Modèle</th>
-        <th scope="col">Date</th>
-        <th scope="col">Prix</th>
-        <th scope="col">Statut</th>
-        <th scopre="col">Annulation</th>
+        <th scope="col" class="titre_shop text-center">N°</th>
+        <th scope="col" class="titre_shop text-center">Montre</th>
+        <th scope="col" class="titre_shop text-center">Modèle</th>
+        <th scope="col" class="titre_shop text-center">Date</th>
+        <th scope="col" class="titre_shop text-center">Prix</th>
+        <th scope="col" class="titre_shop text-center">Statut</th>
+        <th scopre="col" class="titre_shop text-center">Annulation</th>
       </tr>
     </thead>
     <tbody>
       <% @booking_items.each_with_index do |item, index| %>
         <tr>
           <th scope="row"><%= index + 1 %></th>
-          <td><%= item.watch.brand %></td>
-          <td><%= item.watch.model %></td>
-          <td><%= item.created_at %></td>
-          <td><%= item.cost.to_i %> €</td>
-          <td><%= item.status %></td>
-          <td><%= link_to 'Annulation', watch_booking_item_path(item), method: :delete, data: {confirm: "Êtes-vous sur de vouloir supprimer cette montre ?"} %></td>
+          <td class="text-center"><%= item.watch.brand %></td>
+          <td class="text-center"><%= item.watch.model %></td>
+          <td class="text-center"><%= item.created_at %></td>
+          <td class="text-center"><%= item.cost.to_i %> €</td>
+          <td class="text-center"><%= item.status %></td>
+          <td class="text-center"><%= link_to '<i class="fas fa-times"></i>'.html_safe, watch_booking_item_path(item), method: :delete, data: {confirm: "Êtes-vous sur de vouloir supprimer cette montre ?"} %></td>
         </tr>
       <% end %>
     </tbody>
   </table>
+</div>
+
+<div class="container-carroussel">
+  <div class="code" id="code">
+    <form action="https://immense-lowlands-36043.herokuapp.com/" method="post" id="cadeaux">
+      <label for="couleur_titre_2" id="text_cadeaux">Vous avez un code privilège ou une carte cadeau ?</label>
+      <input type="hidden" name="token">
+      <input id="discount_name" type="text" placeholder="Entrez votre code !">
+      <button type="submit" class="btn btn-flat"></button>
+      </form>
+<div class="d-flex justify-content-between">
+  </div>
+</div>
 </div>
