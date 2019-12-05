@@ -6,7 +6,7 @@ class BookingItemsController < ApplicationController
     @booking_item.booking = @booking
     if @booking_item.save
       update_booking_price
-      redirect_to watch_path(@booking_item.watch)
+      redirect_to watches_path
     end
   end
 
