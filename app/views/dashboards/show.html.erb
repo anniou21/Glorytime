@@ -49,7 +49,7 @@
         <div class="container mt-5 search-row">
           <h1>Mes commandes</h1>
               <%= form_tag dashboard_path, method: :get do %>
-                <%= select_tag :status, options_for_select(['pending', 'paid']),
+                <%= select_tag :status, options_for_select(['Select a status','pending', 'paid']),
                   class: "form-control"
                 %>
 
