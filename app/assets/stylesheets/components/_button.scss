@@ -20,6 +20,25 @@
   color: white;
 }
 
+.btn-low-2 {
+    color: black;
+    padding: 14px 24px;
+    background: #e6b31e;
+    -webkit-transition: background 0.3s ease;
+    transition: background 0.3s ease;
+    margin: -2px;
+    width: 161px;
+    margin-left: 594px;
+    margin-top: 31px;
+}
+
+.btn-low-2:hover {
+  background: #e6b31e;
+  color: white;
+}
+
+
+
 .btn-flat:hover {
   background: #434343;
   color: white;

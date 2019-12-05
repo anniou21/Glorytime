@@ -188,17 +188,20 @@
                   <% current_user.bookmarks.each do |bookmark| %>
                 <th scope="col">
                     <div class="media text-muted pt-3">
-                        <%= cl_image_tag bookmark.watch.photo.key, class: "avatar-bordered mr-3", height: 46, width: 40 %>
-                        <p class="media-body pb-3 mb-0 small lh-125">
-                          <strong class="d-block font-weight-bold">
-                            <%= bookmark.watch.brand %> </strong>
-                            <%= bookmark.watch.price %> €
-                          <%= link_to '<i class="far fa-times-circle"></i>'.html_safe, bookmark_path(bookmark), method: :delete, data: {confirm: "Êtes-vous sur de vouloir supprimer la montre ?"}%>
-                        </p>
+                        <%= link_to watch_path(bookmark.watch) do %>
+                          <%= cl_image_tag bookmark.watch.photo.key, class: "avatar-bordered mr-3", height: 46, width: 40 %>
+                        <% end %>
+                              <p class="media-body pb-3 mb-0 small lh-125">
+                                <strong class="d-block font-weight-bold">
+                                  <%= bookmark.watch.brand %> </strong>
+                                  <%= bookmark.watch.price %> €
+                                <%= link_to '<i class="far fa-times-circle"></i>'.html_safe, bookmark_path(bookmark), method: :delete, data: {confirm: "Êtes-vous sur de vouloir supprimer la montre ?"}%>
+                              </p>
                       </div>
-                    <% end %>
+
+                      <% end %>
                 </th>
-              </tr
+              </tr>
             </thead>
             <tbody>
               <tr>
