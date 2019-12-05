@@ -62,8 +62,7 @@
               <tr>
                 <th scope="col">Statut</th>
                 <th scope="col">Prix</th>
-                <th scope="col">Début</th>
-                <th scope="col">Fin</th>
+                <th scope="col">Période</th>
                 <th scope="col">Produit</th>
                 <th scope="col">Détails</th>
               </tr>
@@ -87,11 +86,8 @@
 
 
                 <% if b.booking_items.first.start_date != nil %>
-                  <td><%= b.booking_items.first.start_date.strftime("%d/%m/%Y") %></td>
-                  <td><%= b.booking_items.first.end_date.strftime("%d/%m/%Y") %></td>
+                  <td><%= b.booking_items.first.start_date.strftime("%d %b %Y") %> | <%= b.booking_items.first.end_date.strftime("%d/%m/%Y") %></td>
                 <% else %>
-                  <td></td>
-                  <td></td>
                 <% end %>
 
                 <td>
