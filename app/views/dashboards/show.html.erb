@@ -82,7 +82,7 @@
                   </td>
 
                 <% unless b.booking_items.empty? %>
-                  <td><%= b.price_cents%>€ </td>
+                  <td><%= @booking.price.to_i %>€ </td>
                 <% end %>
 
 
