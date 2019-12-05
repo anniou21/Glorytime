@@ -6,7 +6,7 @@ $trs-time-sm: .35s;
 $trs-ease: ease;
 
 .container-checkout {
-  background-color: #e6b31e;
+  background-color: #171717;
   width: 100%;
   height: 600px;
   padding-top: 110px;
@@ -58,6 +58,9 @@ $trs-ease: ease;
 .upper {
   padding: 20px;
   z-index: 10;
+  background-color: white;
+  color: black;
+  border: 2px solid #e6b31e;
 
   &::after {
     top: 100%;
@@ -111,6 +114,7 @@ h1 {
   &.page-title {
     text-align: center;
     margin-bottom: 60px;
+    color: white;
   }
 }
 

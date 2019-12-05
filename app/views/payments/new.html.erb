@@ -4,7 +4,7 @@
       <section class="receipt__half upper">
         <p>Total à payer</p>
         <h1><strong><%= humanized_money_with_symbol @order.price_cents/100 %></strong></h1>
-        <p class="sm"><strong>Le </strong><%= DateTime.now.strftime("%d/%m/%y - %H:%M")%></p>
+        <p class="sm"><strong>Edité le </strong><%= DateTime.now.strftime("%d/%m/%y - %H:%M")%></p>
         <section class="receipt">
               <button class="btn btn-flat btn-lg" style="margin-top: 35px;" id="pay">Payer</button>
                    <script src="https://js.stripe.com/v3/"></script>
