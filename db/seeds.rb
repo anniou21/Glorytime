@@ -159,9 +159,6 @@ puts 'Creating Watches...'
   watch_2 = Watch.create(
     brand: "Tag Heuer",
     model: "TAG HEUER MONACO CALIBRE 11",
-    price_cents: 595000,
-    description: " À l’occasion du 50e anniversaire de la TAG Heuer Monaco, la Maison lance une édition limitée à seulement 169 exemplaires aux côtés de quatre autres montres exclusives.",
-    availability: true,
     sku: "TAG-HEUER-MC-11",
     cost_per_day_cents: 15000,
     shop: Shop.find_by(name: "Champs d'Or")
@@ -175,9 +172,6 @@ puts 'Creating Watches...'
   watch_3 = Watch.create(
     brand: "IWC",
     model: "INGENIEUR CHRONOGRAPHE",
-    price_cents: 860000,
-    description: "L’Ingenieur Chronographe est animé par le calibre de manufacture IWC 69375 avec remontage bidirectionnel à cliquets et réserve de marche de 46 heures.",
-    availability: true,
     sku: "IWC-IC",
     cost_per_day_cents: 15000,
     shop: Shop.find_by(name: "Champs d'Or")
