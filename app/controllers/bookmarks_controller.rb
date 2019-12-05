@@ -13,7 +13,7 @@ class BookmarksController < ApplicationController
     @watch = Watch.find(params[:watch_id])
     @bookmark = Bookmark.new(watch: @watch, user: current_user)
     if @bookmark.save
-      flash[:notice] = "Votre montre #{@watch.brand} a bien été ajoutée dans la wishlist. Consulter votre tableau de bords "
+      flash[:notice] = "Votre montre #{@watch.brand} a bien été ajoutée dans vos favoris"
       redirect_to @watch
     else
       render 'watch/show'
