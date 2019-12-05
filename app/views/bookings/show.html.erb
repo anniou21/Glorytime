@@ -1,6 +1,6 @@
 
  <div class="fond-jaune">
-        <h1 class="text-center">Voici votre réservation !</h1>
+        <h1 class="text-center" style="color: white;">Voici votre réservation !</h1>
 
   <div class="container-booking">
     <div class="d-flex justify-content-between">
@@ -19,7 +19,7 @@
           <th scope="col">Photo</th>
           <th scope="col">Montre</th>
           <th scope="col">Modèle</th>
-          <th scope="col">Date</th>
+          <th scope="col">Période</th>
           <th scope="col">Prix</th>
           <th scopre="col">Action</th>
         </tr>
@@ -31,7 +31,7 @@
             <td><%= cl_image_tag item.watch.photo.key, height: 40, width: 50, crop: :fill %></td>
             <td><%= item.watch.brand %></td>
             <td><%= item.watch.model.truncate_words(1) %></td>
-            <td><%= item.created_at %></td>
+            <td><%= item.created_at.strftime("%d %b %Y") %> | <%= item.end_date.strftime("%d %b %Y") %></td>
             <td><%= item.cost.to_i %> €</td>
             <td><%= link_to '<i class="fas fa-trash-alt"></i>'.html_safe, watch_booking_item_path(item), method: :delete, data: {confirm: "Êtes-vous sur de vouloir supprimer cette montre ?"}, class:'btn' %></td>
           </tr>
