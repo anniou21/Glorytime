@@ -7,6 +7,19 @@
   margin: -2px;
 }
 
+.btn-low {
+  color: black;
+  padding: 13px 24px;
+  background: #e6b31e;
+  transition: background 0.3s ease;
+  margin: -2px;
+}
+
+.btn-low:hover {
+  background: #e6b31e;
+  color: white;
+}
+
 .btn-flat:hover {
   background: #434343;
   color: white;

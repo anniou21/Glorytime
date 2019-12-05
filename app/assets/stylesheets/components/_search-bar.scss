@@ -38,6 +38,26 @@
 }
 
 
+.logo-search {
+    width: 146px;
+    height: 100%;
+    font-size: 25px;
+    opacity: 0.9;
+    font-weight: 100;
+    background-color: #e6b31e;
+    border-radius: 2px;
+    text-align: center;
+    padding-top: 16px;
+}
+
+.form-control {
+  border: 2px solid #e6b31e;
+}
+
+.form-inline {
+  margin-left: 265px;
+  width: 800px;
+
 .search-btn {
   height: 70px !important;
     color: white !important;
@@ -49,6 +69,5 @@
     height: 39px !important;
     width: 80px !important;
     text-align: center !important;
-
 }
 

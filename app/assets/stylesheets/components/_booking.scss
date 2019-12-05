@@ -3,10 +3,17 @@
   border: 2px solid black;
   width: 1070px;
   height: 300px;
-  margin: 30px 0px 30px 0px;
+  margin: 100px 0px 30px 0px;
   padding: 20px;
-  margin-left: 250px;
-  box-shadow: 5px 3px 3px grey;
+  margin-left: 120px;
+}
+
+.fond-jaune {
+    height: 700px;
+    width: 100%;
+    background-color: #e6b31e;
+    padding: 50px;
+    padding-top: 95px;
 }
 
 .container-paiement {
@@ -14,10 +21,50 @@
   border: 2px solid black;
   width: 150px;
   height: 80px;
-  margin: 30px 0px 30px 0px;
+  margin: 100px 0px 30px 0px;
   padding: 20px;
   margin-left: 250px;
   box-shadow: 5px 3px 3px grey;
+  min-height: 200px;
+}
+
+.container-carroussel {
+  color: black;
+  border: 2px solid black;
+  width: 30%;
+  height: 100px;
+  margin: 100px 0px 30px 0px;
+  padding: 20px;
+  margin-left: 250px;
+  box-shadow: 5px 3px 3px grey;
+}
+
+#text_cadeaux {
+  color: grey;
+  font-size: 13px;
+  display: block;
+}
+
+#cadeaux button {
+  background-color: #e5b31d;
+  border-radius: initial;
+  border: 1px solid #f2f3fa;
+  height: 30px;
+  /* margin: 0px; */
+  margin-top: -8px;
+}
+
+#cadeaux button {
+  position: relative;
+}
+
+#cadeaux button:before {
+  content: "OK";
+  color: white;
+  position: absolute;
+  transform: translate(-50%,-50%);
+  top: 50%;
+  left: 50%;
 }
 
 #button_paiement {
@@ -40,6 +87,8 @@
 
 .table th, .table td {
   color: black;
+  border-collapse:collapse;
+  border-top: 2px solid black;
 }
 
 #couleur_titre {
