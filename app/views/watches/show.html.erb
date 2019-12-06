@@ -32,13 +32,15 @@
           <div class="col-sm-12 col-md-6" id="product-information">
              <h2 class="p-0 m-0" id="product-title"><%= @watch.brand %></h2>
               <span id="product-short"><small><%= @watch.model %></small></span>
+              <hr class="divider-featurette">
             <div class="container-fluid">
                           <div class="row">
                             <span id="old-price" class="text-danger"></span><h5 id="price"><%= @watch.cost_per_day %> €/jour</h5>
                             </div>
-                          <div class = "Prixvente">
-                            <p><%= @watch.price %> € | Prix de vente</p>
-                          </div>
+                            <div class="row">
+                              <span class="prixvente"><%= @watch.price %> € | Prix de vente</span>
+                            </div>
+
 
             </div>
              <div id="product-variables">
