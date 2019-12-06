@@ -161,7 +161,7 @@ puts 'Creating Watches...'
     model: "TAG HEUER MONACO CALIBRE 11",
     sku: "TAG-HEUER-MC-11",
     price_cents: 530000,
-    description: "SOYEZ UNE ICÔNE. Tout comme la ville éponyme et la course automobile qu'elle accueille, la Monaco est la quintessence de l'élégance et du prestige avec une touche de vintage."
+    description: "SOYEZ UNE ICÔNE. Tout comme la ville éponyme et la course automobile qu'elle accueille, la Monaco est la quintessence de l'élégance et du prestige avec une touche de vintage.",
     availability: true,
     cost_per_day_cents: 4500,
     shop: Shop.find_by(name: "Champs d'Or")
@@ -177,7 +177,7 @@ puts 'Creating Watches...'
     model: "INGENIEUR CHRONOGRAPHE",
     sku: "IWC-IC",
     price_cents: 830000,
-    description: "L’Ingenieur Chronographe est animé par le calibre de manufacture IWC 69375 avec remontage bidirectionnel à cliquets et réserve de marche de 46 heures."
+    description: "L’Ingenieur Chronographe est animé par le calibre de manufacture IWC 69375 avec remontage bidirectionnel à cliquets et réserve de marche de 46 heures.",
     availability: true,
     cost_per_day_cents: 4500,
     shop: Shop.find_by(name: "Champs d'Or")
