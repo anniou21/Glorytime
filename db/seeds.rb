@@ -147,7 +147,7 @@ puts 'Creating Watches...'
     price_cents: 430000,
     description: "De 41 mm de diamètre, son boîtier renferme un mouvement automatique de calibre 16, vous permettant l'affichage de la date par guichet ainsi que l'animation de son cadran sombre et de la fonction chronographe.",
     availability: true,
-    cost_per_day_cents: 300,
+    cost_per_day_cents: 3000,
     shop: Shop.find_by(name: "Champs d'Or")
   )
   watch_1.photo.attach(
@@ -709,7 +709,7 @@ CHRONOGRAPHE OMEGA CO‑AXIAL 41,5 MM",
     price_cents: 1040000,
     description: "La lunette tournante unidirectionnelle graduée 60 minutes de la nouvelle Sea‑Dweller permet de lire les temps de plongée et de décompression avec précision et en toute sécurité.",
     availability: true,
-    cost_per_day_cents: 500,
+    cost_per_day_cents: 5000,
     shop: Shop.find_by(name: "Atelier R.de Fèbres")
     )
    watch_35.photo.attach(
